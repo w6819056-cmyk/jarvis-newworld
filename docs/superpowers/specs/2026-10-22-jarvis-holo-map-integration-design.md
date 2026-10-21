@@ -17,14 +17,14 @@
 ## 方案比较
 
 1. 单独启动现有地图程序：改动少，但需要额外安装和维护第二个进程，Jarvis 对窗口生命周期与命令结果的控制也较弱。
-2. 将地图 renderer 集成为 Jarvis 的独立 BrowserWindow：保留地图界面和 Electron 应用边界，由 Jarvis 统一打包并通过受限 IPC 控制。推荐此方案。
+2. 将地图 renderer 集成为 Jarvis 宿主应用管理的地图子窗口：它是同一 Jarvis Electron 主进程和安装包中的功能模块，不是独立软件、单独进程或可脱离 Jarvis 控制的程序；保留地图界面和内部模块边界，由 Jarvis 统一管理启动/关闭、权限、配置、打包和命令控制，并通过受限 IPC 通信。推荐此方案。
 3. 将地图重写进透明 HUD：会把地图交互与粒子/头盔 renderer 耦合，增加界面、权限和渲染风险，且会损失地图原有工作区。
 
 ## 设计
 
 ### 模块边界
 
-在 Jarvis 内建立 `modules/holo-map` 地图模块，并将其 renderer 作为 Jarvis Vite 多页面构建中的第二个页面。Jarvis 主进程按需创建普通、有边框、可调整大小的地图 `BrowserWindow`，地图窗口使用独立 preload 和最小权限桥接接口。窗口关闭只关闭地图，不退出 Jarvis。
+在 Jarvis 内建立 `modules/holo-map` 地图模块，并将其 renderer 作为 Jarvis Vite 多页面构建中的第二个页面。Jarvis 主进程按需创建普通、有边框、可调整大小的地图 `BrowserWindow` 子窗口；这是 Jarvis 统一管理的窗口表面，不是独立软件、安装包或进程，地图不能自行启动第二个 Electron 主进程。地图页面使用专属 preload 和最小权限桥接接口。窗口关闭只关闭地图，不退出 Jarvis；Jarvis 退出时统一关闭地图窗口。
 
 只纳入地图 renderer、地图组件、样式及运行需要的静态资源。不得复制地图项目的 Electron main、preload、`package.json`、锁文件、Vite/Electron Builder 配置、`node_modules`、构建目录、日志或现成安装包。Jarvis 保留自己的 Electron 入口、设置持久化和打包配置。所需依赖在 Jarvis 根包中明确声明，版本采用现有依赖或经过验证的兼容版本。
 
