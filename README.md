@@ -1,214 +1,99 @@
-<p align="center">
-  <img src="src-tauri/icons/icon.png" width="160" alt="Jarvis Codex icon">
-</p>
+# Jarvis New World
 
-<h1 align="center">Jarvis × Codex</h1>
+Windows desktop voice assistant built around Codex. Jarvis stays quietly in the background, wakes on “嗨 Jarvis” or “Hi Jarvis”, and gives the user a visual, local-first control surface for voice, text, tools, maps, weather, music, and desktop tasks.
 
-<p align="center">
-  Wake Codex from your desktop with “Hey Jarvis.”
-</p>
+This repository is the Windows-focused continuation of the original Jarvis interface. It is an Electron application with a TypeScript renderer and a protected main-process runtime. The goal is a practical desktop assistant that can understand a natural request and route it to the right local module.
 
-<p align="center">
-  English · <a href="README.zh-CN.md">简体中文</a>
-</p>
+## What Jarvis can do
 
-<p align="center">
-  <a href="https://github.com/Big-Guan/jarvis-codex/releases/latest">Download the latest DMG</a>
-  ·
-  <a href="CONTRIBUTING.md">Contribute</a>
-</p>
+- **Three voice providers:** Codex Voice, Doubao streaming ASR/TTS, and the local speech engine. The provider is selected in Settings; typed input remains available as a fallback.
+- **Wake and conversation flow:** background wake listening, visible transcript of the current utterance, interruption/stop controls, task status, spoken responses, and local conversation history.
+- **Codex work channel:** continues a workspace thread, sends voice or typed requests to Codex, and exposes permission-aware task execution.
+- **Windows control:** launch applications, activate windows, inspect system resources, control volume, list processes, and run Windows UI Automation for supported foreground-window workflows.
+- **Desktop visual interface:** transparent Jarvis helmet, particle assembly, armor inspection mode, gesture-controlled armor interaction, selectable components, and status HUDs that appear only when needed.
+- **Map module:** an internal browser window for AMap search, nearby food and places, route planning, and in-module navigation. It is controlled by Jarvis through restricted IPC and is not a separate installed application.
+- **Rainform module:** local rain visualization driven by weather data. Ask for the nearest rainy city in China or the rain intensity in a named city, then inspect the result in the rain module.
+- **Mineradio module:** play/pause, next/previous, volume, search and play, and visual preset switching. Say “换一个音乐效果” to choose a random preset or name a specific preset.
+- **HUD answers:** weather, search, media and module results can be shown as compact in-world panels next to the helmet instead of taking over the whole screen.
+- **Local memory:** conversation text and metadata are stored in a local SQLite archive. No audio recordings or raw voice data are stored by Jarvis.
 
-<p align="center">
-  <img src="public/assets/jarvis-character-v2.png" width="520" alt="Jarvis Codex transparent avatar">
-</p>
-
-Jarvis × Codex is a local voice workspace for macOS. Say the wake phrase and a
-transparent Jarvis window rises from the desktop, then connects to the same
-Codex thread through the Codex app-server WebRTC interface. You can speak
-naturally, interrupt a response, continue the conversation, and ask Codex to
-perform real work in the selected project.
-
-> Current status: wake, live transcription, voice responses, and Codex task
-> execution have been verified on Apple Silicon running macOS 26. Realtime
-> conversation is still an experimental Codex app-server capability, so
-> upstream protocol changes may require compatibility updates.
-
-## What it does
-
-- Recognizes “Hi/Hey Jarvis” and Chinese Jarvis wake phrases on-device
-- Opens a transparent, borderless Tauri 2 desktop interface
-- Connects directly to Codex Voice through app-server V3 WebRTC
-- Keeps voice, text, tool activity, and task execution in the same Codex thread
-- Stores one persistent thread per canonical workspace path
-- Supports natural turn-taking, interruption, follow-up questions, and STOP
-- Offers safe, automatic workspace, and full-access permission profiles
-- Runs in the background at login and raises the window on warm or cold wake
-- Falls back to text input when Voice is temporarily unavailable
-
-Jarvis does not simulate clicks in the Codex or ChatGPT applications, register
-a global hotkey, or create a separate GPT-Live session. It reuses the local
-Codex authentication and app-server runtime.
-
-## Visual evolution
-
-### v0.1.x — holographic workstation
-
-![Jarvis Codex v0.1.x holographic workstation](docs/images/jarvis-main-ui.png)
-
-The first version used a persistent HUD with task roles, transcripts, text
-input, and STOP controls. It emphasized visibility into what Codex was doing.
-
-### v0.2.0 — transparent character interface
-
-The second version makes Jarvis the interface itself. Particles, armor shards,
-and energy rings assemble the character when it wakes. Controls remain hidden
-until the pointer enters the character area, while audio levels and task states
-drive breathing, scanning, acknowledgement, approval, completion, and error
-effects.
-
-The visual layer consumes the existing audio, transcript, and task events. It
-does not replace the wake listener, WebRTC connection, workspace thread
-resumption, permission profiles, or interruption logic.
-
-## How it works
+## Typical commands
 
 ```text
-JarvisWakeListener (on-device speech recognition)
-        ↓
-Tauri / Rust host raises the Jarvis window
-        ↓
-The wake listener releases the microphone
-        ↓
-WebView creates a WebRTC offer
-        ↓
-Codex app-server V3 realtime conversation
-        ↓
-One Codex thread for voice, text, tools, and project work
+嗨 Jarvis，打开浏览器搜索今天的天气
+帮我看看附近有什么美食
+导航到郑州东站
+现在离我们最近的哪个城市在下雨
+郑州现在的雨有多大
+播放一首音乐，换一个音乐效果
+开始工作了贾维斯
+结束工作
 ```
 
-The Swift wake helper and the Voice session never capture the microphone at the
-same time. See [Architecture](docs/ARCHITECTURE.md) for the runtime, thread, and
-trust boundaries.
+The exact available actions depend on the configured provider, API credentials, installed applications, and the state of each module. High-risk file or process operations should be confirmed through the configured Codex permission policy.
 
-## Quick start
+## Architecture
 
-1. Install and sign in to Codex App, ChatGPT App, or Codex CLI on your Mac.
-2. Download the latest DMG and drag `Jarvis Codex` into Applications.
-3. Allow microphone and speech-recognition access on first launch.
-4. Open Settings and select the project directory Codex should work in.
-5. Close the window to leave Jarvis listening in the background.
-6. Say “Hey Jarvis,” then speak your task when the window appears.
-7. Move the pointer over Jarvis to reveal controls; select `STOP` to interrupt
-   Voice and the active task.
+```text
+Microphone / typed input
+        ↓
+Wake gate and speech provider (Codex / Doubao / local)
+        ↓
+Electron main process and command routing
+        ├── Codex workspace runtime and local memory
+        ├── Windows system and UI Automation tools
+        ├── Mineradio bridge
+        ├── Holo-map module
+        ├── Rainform module
+        └── Jarvis visual window and HUDs
+```
 
-If Voice is unavailable, use the text field at the bottom. Voice and text use
-the thread associated with the current workspace.
-
-## Permission profiles
-
-| Profile | Sandbox | Approval policy | Intended use |
-| --- | --- | --- | --- |
-| Safe | `workspace-write` | `on-request` | Confirm operations when needed |
-| Auto | `workspace-write` | `never` | Work autonomously inside the workspace |
-| Full | `danger-full-access` | `never` | Explicitly enabled high-trust work |
-
-Permission profile values are validated by the Rust host. The frontend cannot
-send arbitrary sandbox or approval-policy strings.
+Renderer windows communicate with the main process through isolated preload APIs and restricted IPC. Module windows do not receive unrestricted Node.js or filesystem access.
 
 ## Requirements
 
-For regular use:
-
-- macOS 13 or later
-- Apple Silicon for the currently published DMG
-- Codex App, ChatGPT App, or Codex CLI installed and signed in
-- Microphone and speech-recognition permission
-
-For source development:
-
+- Windows 10/11, with Windows 11 recommended
 - Node.js 20 or later
-- Rust stable with `rustfmt` and `clippy`
-- Xcode Command Line Tools and Swift
+- Codex App/CLI installed and signed in when using Codex Voice or Codex tasks
+- A microphone for wake and voice control
+- Optional: Doubao API credentials, AMap JS API credentials, and QWeather credentials
+- Optional: Mineradio installation for music controls
 
 ## Development
 
 ```bash
 npm ci
-npm run check
+npm run windows:test
+npm run windows:build
 npm run dev
 ```
 
-To set the initial development workspace:
+To create a Windows installer:
 
 ```bash
-JARVIS_WORKSPACE=/absolute/path npm run dev
+npm run windows:dist
 ```
 
-You can also save a workspace in Jarvis Settings.
+Build outputs are written to the local `dist-windows/` or Electron Builder output directories and are intentionally ignored by Git.
 
-## Testing
+## Configuration
 
-Before opening a pull request, run:
+Open Jarvis Settings to choose the voice provider and enter module credentials. Secrets are stored in the local application configuration and are not committed to this repository. Do not place API keys, tokens, commercial audio, or unlicensed model files in Git.
 
-```bash
-npm run check
-npm run build
-```
+For the map module, configure an AMap JS API key and security code. For Rainform, configure the weather API host and key. Doubao requires the API key plus the ASR and TTS resource identifiers required by the selected streaming services.
 
-Changes to wake, microphone, Voice, STOP, thread resumption, permissions, or
-packaging also require a real macOS smoke test. The current automated tests
-verify important protocol and lifecycle invariants, but cannot prove that the
-experimental realtime service or macOS privacy prompts work end to end.
+## Privacy and safety
 
-## Build
+- Voice audio is sent only to the selected voice provider while that provider is active.
+- Conversation text is stored locally for search and semantic memory; raw audio is not archived.
+- The map and weather modules receive only the data needed for their requested operation.
+- `.env` files, local credentials, SSH keys, runtime data, installers, private models, and user-provided music are excluded from version control.
+- Codex permission profiles remain the authority for workspace and high-risk operations.
 
-```bash
-npm run build
-```
+## Project status
 
-Expected outputs:
-
-- `src-tauri/target/release/bundle/macos/Jarvis Codex.app`
-- `src-tauri/target/release/bundle/dmg/Jarvis Codex_0.2.0_aarch64.dmg`
-
-The build script creates and signs `JarvisWakeListener.app`. The generated app
-bundle is not committed to Git.
-
-## Production releases
-
-Local builds use the ad-hoc signing identity `-`. Public distribution requires
-an Apple Developer ID Application certificate and notarization. Do not publish
-an ad-hoc build as a production release.
-
-See the [production release checklist](docs/PRODUCTION.md) for signing,
-notarization, entitlement, and smoke-test requirements.
-
-## Privacy and security
-
-- Wake recognition requires on-device speech recognition.
-- Microphone audio reaches Codex Voice only after wake.
-- Raw audio and login credentials are not stored by Jarvis.
-- The WebView uses a restrictive content security policy.
-- Automatic mode remains confined to the selected workspace.
-- Full access must be selected explicitly.
-- Siri is not part of the runtime path.
-
-Please report vulnerabilities according to [SECURITY.md](SECURITY.md), not in a
-public issue.
+Jarvis New World is an actively developed Windows desktop project. Voice providers and module integrations are evolving, so service availability and provider protocol changes may require compatibility updates. The source repository is the canonical development artifact; generated installers and local runtime data are not part of the source distribution.
 
 ## License
 
-Jarvis × Codex is released under the [GNU General Public License v3.0](LICENSE).
-
-## Contributing
-
-Contributions are welcome. The `main` branch is protected and does not accept
-direct pushes. Contributors must fork the repository, create a branch in their
-fork, and open a pull request. Read [CONTRIBUTING.md](CONTRIBUTING.md) before
-starting work.
-
-## Codex runtime compatibility
-
-Jarvis discovers current Codex/ChatGPT desktop CLI layouts and checks Voice v3
-compatibility before connecting. Launching the app does not automatically
-enable login startup. See [runtime details](docs/CODEX_RUNTIME.md).
+The core project is released under the [GNU General Public License v3.0](LICENSE). Third-party modules and assets retain their own licenses; see the accompanying license files and notices before redistribution.

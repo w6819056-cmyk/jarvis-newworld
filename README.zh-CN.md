@@ -1,205 +1,99 @@
-<p align="center">
-  <img src="src-tauri/icons/icon.png" width="160" alt="Jarvis Codex 图标">
-</p>
+# Jarvis New World
 
-<h1 align="center">Jarvis × Codex</h1>
+一个面向 Windows 的桌面语音管家。Jarvis 在后台等待唤醒，听到“嗨 Jarvis”或“Hi Jarvis”后，显示全息头盔界面，并把语音、文字、地图、天气、音乐和电脑操作分发给对应模块。
 
-<p align="center">
-  一声“嗨 Jarvis”，让 Codex 从桌面醒来。
-</p>
+本仓库是原 Jarvis 界面的 Windows 方向继续开发版本。项目使用 Electron 和 TypeScript，主进程负责语音运行时、Codex 任务、Windows 工具以及模块控制；渲染界面通过隔离的 preload API 和受限 IPC 与主进程通信。
 
-<p align="center">
-  <a href="README.md">English</a> · 简体中文
-</p>
+## 当前能力
 
-<p align="center">
-  <a href="https://github.com/Big-Guan/jarvis-codex/releases/latest">下载最新版 DMG</a>
-  ·
-  <a href="CONTRIBUTING.md">参与贡献</a>
-</p>
+- **三套语音通道：** Codex Voice、豆包流式语音识别/合成、本地语音引擎。可在设置中选择，语音不可用时仍可使用输入框。
+- **唤醒与对话：** 后台唤醒、当前语句实时显示、打断/停止、任务状态、语音回复和本地对话记录。
+- **Codex 工作通道：** 继续指定工作目录的 Codex 线程，发送语音或文字指令，并遵循 Codex 权限策略执行任务。
+- **Windows 控制：** 启动应用、激活窗口、查询系统资源、调节音量、查看进程，并在支持的前台窗口中使用 Windows UI Automation。
+- **全息视觉界面：** 透明 Jarvis 头盔、粒子聚合、战甲检查模式、手势控制、部件选择、高亮和按需出现的 HUD。
+- **地图模块：** AMap 地图在 Jarvis 内部窗口运行，支持附近美食/地点搜索、路线规划和模块内导航。它受 Jarvis 的受限 IPC 控制，不是另一个需要单独安装的软件。
+- **Rainform 雨幕模块：** 使用天气数据显示降雨效果。可以询问中国境内距离最近的下雨城市，也可以查看指定城市的雨量。
+- **Mineradio 音乐模块：** 播放/暂停、上一首/下一首、音量、搜索播放和视觉预设切换。说“换一个音乐效果”会随机切换预设，也可以直接说出指定预设。
+- **HUD 信息面板：** 天气、搜索、媒体和模块结果可以显示在头盔旁边的悬浮信息框内，不占满整个屏幕。
+- **本地记忆：** 对话双方的文字和元数据保存在本地 SQLite 中，用于搜索和语义记忆；Jarvis 不保存原始音频。
 
-<p align="center">
-  <img src="public/assets/jarvis-character-v2.png" width="520" alt="Jarvis Codex 透明角色界面">
-</p>
-
-Jarvis × Codex 是一个 macOS 本地语音工作入口。说出唤醒词后，透明窗口从桌面升起，
-粒子与装甲碎片聚合成 Jarvis；随后通过 Codex app-server WebRTC 进入同一个
-Codex 线程。你可以自然对话、打断回复、继续追问，也可以让 Codex 在选定项目中
-真正执行任务。
-
-> 当前状态：已在 macOS 26 Apple Silicon 实机验证唤醒、实时转写、语音回复和
-> Codex 任务执行。Realtime conversation 仍是实验性的 Codex app-server 能力，
-> 上游协议升级时可能需要同步适配。
-
-## 主要能力
-
-- 使用本机语音识别唤醒词：嗨/嘿 Jarvis、Hi/Hey Jarvis、嗨/嘿贾维斯
-- Tauri 2 + Rust + TypeScript 透明无边框桌面界面
-- 通过 app-server V3 WebRTC 直接连接 Codex Voice
-- 语音、文字、工具事件和任务执行共用同一个 Codex 线程
-- 按规范化后的工作目录持久化并续接不同线程
-- 支持自然轮流说话、回复中打断、连续追问和 STOP
-- 提供安全、自动办公和完全访问三档权限
-- 登录时后台启动，冷启动或暖启动唤醒后升起窗口
-- Voice 临时不可用时可以使用文字输入
-
-Jarvis 不模拟点击 Codex 或 ChatGPT 窗口，不绑定全局热键，也不创建第二套
-GPT-Live 会话。它复用本机 Codex 的登录状态和 app-server runtime。
-
-## 视觉演进
-
-### v0.1.x：全息工作台
-
-![Jarvis Codex v0.1.x 全息工作台](docs/images/jarvis-main-ui.png)
-
-第一版采用完整 HUD 工作台，任务角色、对话记录、文字输入和 STOP 控制常驻页面，
-重点是让用户清楚地看到 Codex 正在做什么。
-
-### v0.2.0：透明角色界面
-
-第二版让 Jarvis 本身成为界面。唤醒时，粒子、装甲碎片与能量环聚合成完整角色；
-鼠标移入角色区域后才显示控制按钮。音频电平和任务状态会驱动呼吸、扫描、确认、
-等待授权、完成和异常等视觉反馈。
-
-视觉层只消费已有的音频、转写和任务事件，不替换唤醒监听、WebRTC 连接、工作目录
-线程续接、权限模式或任务中断逻辑。
-
-## 工作原理
+## 示例指令
 
 ```text
-JarvisWakeListener（本机语音识别）
-        ↓
-Tauri / Rust 宿主升起 Jarvis 窗口
-        ↓
-唤醒监听器释放麦克风
-        ↓
-WebView 创建 WebRTC offer
-        ↓
-Codex app-server V3 realtime conversation
-        ↓
-语音、文字、工具和项目任务共用一个 Codex 线程
+嗨 Jarvis，打开浏览器搜索今天的天气
+帮我看看附近有什么美食
+导航到郑州东站
+现在离我们最近的哪个城市在下雨
+郑州现在的雨有多大
+播放一首音乐，换一个音乐效果
+开始工作了贾维斯
+结束工作
 ```
 
-Swift 唤醒 helper 与 Voice 会话不会同时采集麦克风。运行时、线程生命周期和信任
-边界详见[架构文档](docs/ARCHITECTURE.md)。
+具体动作取决于所选语音通道、API 配置、已安装的软件和模块状态。涉及文件或进程的高风险操作，应按照 Codex 权限策略进行确认。
 
-## 快速开始
+## 工作流程
 
-1. 在 Mac 上安装并登录 Codex App、ChatGPT App 或 Codex CLI。
-2. 下载最新 DMG，把 `Jarvis Codex` 拖入“应用程序”。
-3. 首次启动时允许麦克风和语音识别权限。
-4. 打开设置，选择希望 Codex 工作的项目目录。
-5. 关闭窗口，让 Jarvis 留在后台监听。
-6. 对电脑说“嗨 Jarvis”，窗口升起后直接说出任务。
-7. 将鼠标移到 Jarvis 上显示控制按钮；点击 `STOP` 可中断 Voice 和当前任务。
+```text
+麦克风 / 输入框
+        ↓
+唤醒门控与语音通道（Codex / 豆包 / 本地）
+        ↓
+Electron 主进程与指令路由
+        ├── Codex 工作线程和本地记忆
+        ├── Windows 系统与 UI Automation 工具
+        ├── Mineradio 桥接
+        ├── 全息地图模块
+        ├── Rainform 雨幕模块
+        └── Jarvis 视觉窗口与 HUD
+```
 
-Voice 暂时不可用时，可以使用底部文字输入框。语音和文字都会进入当前工作目录所
-对应的线程。
-
-## 权限模式
-
-| 模式 | Sandbox | 审批策略 | 使用场景 |
-| --- | --- | --- | --- |
-| 安全模式 | `workspace-write` | `on-request` | 需要时确认操作 |
-| 自动办公 | `workspace-write` | `never` | 在当前工作目录内自主执行 |
-| 完全访问 | `danger-full-access` | `never` | 用户明确启用的高信任任务 |
-
-权限配置由 Rust 宿主验证，前端不能传入任意 sandbox 或审批策略字符串。
+模块窗口不会获得无限制的 Node.js 或文件系统权限，所有跨窗口调用都经过隔离的 preload API 和受限 IPC。
 
 ## 系统要求
 
-普通使用：
-
-- macOS 13 或更高版本
-- 当前发布的 DMG 面向 Apple Silicon
-- 已安装并登录 Codex App、ChatGPT App 或 Codex CLI
-- 麦克风和语音识别权限
-
-源码开发：
-
+- Windows 10/11，推荐 Windows 11
 - Node.js 20 或更高版本
-- Rust stable，并安装 `rustfmt` 和 `clippy`
-- Xcode Command Line Tools 和 Swift
+- 使用 Codex Voice 或 Codex 任务时，需要安装并登录 Codex App/CLI
+- 语音唤醒需要麦克风
+- 可选：豆包 API、高德地图 JS API、和风天气 API
+- 可选：Mineradio 音乐软件
 
-## 本地开发
+## 开发与构建
 
 ```bash
 npm ci
-npm run check
+npm run windows:test
+npm run windows:build
 npm run dev
 ```
 
-设置开发时的初始工作目录：
+生成 Windows 安装包：
 
 ```bash
-JARVIS_WORKSPACE=/absolute/path npm run dev
+npm run windows:dist
 ```
 
-也可以在 Jarvis 设置面板中保存工作目录。
+构建产物写入本地 `dist-windows/` 或 Electron Builder 输出目录，这些目录已经被 Git 忽略。
 
-## 测试
+## 配置
 
-提交 Pull Request 前请运行：
+在 Jarvis 设置中选择语音通道并填写模块凭据。密钥保存在本机应用配置中，不会提交到仓库。不要把 API Key、Token、SSH 私钥、商业音频或未授权模型文件放进 Git。
 
-```bash
-npm run check
-npm run build
-```
-
-如果修改了唤醒、麦克风、Voice、STOP、线程续接、权限或打包逻辑，还需要在真实
-macOS 环境执行 smoke test。现有自动化测试会检查重要协议与生命周期约束，但不能
-证明实验性 realtime 服务和 macOS 隐私授权端到端正常。
-
-## 构建
-
-```bash
-npm run build
-```
-
-预期产物：
-
-- `src-tauri/target/release/bundle/macos/Jarvis Codex.app`
-- `src-tauri/target/release/bundle/dmg/Jarvis Codex_0.2.0_aarch64.dmg`
-
-构建脚本会生成并签名 `JarvisWakeListener.app`，生成的 app bundle 不进入 Git。
-
-## 生产发布
-
-本地构建默认使用 ad-hoc 签名身份 `-`。公开分发必须使用 Apple Developer ID
-Application 证书并完成 notarization，不应把 ad-hoc 构建描述为生产版本。
-
-签名、公证、entitlement 和 smoke test 要求见[生产发布清单](docs/PRODUCTION.md)。
+地图模块需要高德 JS API Key 和安全密钥；Rainform 需要天气 API Host 与 Key；豆包需要 API Key，以及所选流式识别和语音合成服务要求的 ASR/TTS 资源标识。
 
 ## 隐私与安全
 
-- 唤醒词强制使用本机语音识别。
-- 只有唤醒后，麦克风音频才进入 Codex Voice。
-- Jarvis 不保存原始音频和登录凭据。
-- WebView 使用限制性内容安全策略。
-- 自动办公模式限制在选定工作目录内。
-- 完全访问必须由用户主动选择。
-- Siri 不参与主链路。
+- 只有选定的语音通道运行时才会接收对应的语音数据。
+- 对话文字在本地保存，用于搜索和语义记忆；不归档原始音频。
+- 地图与天气模块只接收完成当前请求所需的数据。
+- `.env`、本地凭据、SSH 密钥、运行数据、安装包、私有模型和用户音乐均被排除在版本控制之外。
+- Codex 权限配置是工作区和高风险操作的最终控制边界。
 
-安全问题请按照 [SECURITY.md](SECURITY.md) 私下报告，不要创建公开 Issue。
+## 项目状态
 
-## 开源许可证
+Jarvis New World 是持续开发中的 Windows 桌面项目。语音服务和模块接口仍会随上游协议更新而调整；源码仓库是开发主线，安装包和本地运行数据不属于源码发布内容。
 
-Jarvis × Codex 使用 [GNU General Public License v3.0](LICENSE) 开源。
+## 许可证
 
-## 参与贡献
-
-欢迎参与项目贡献。`main` 分支受到保护，不接受直接推送。贡献者需要先 Fork 仓库，
-在自己的 Fork 中创建分支，然后提交 Pull Request。开始开发前请阅读
-[CONTRIBUTING.md](CONTRIBUTING.md)。
-
-## 本地运行时兼容性
-
-Jarvis 会识别新版 Codex/ChatGPT 桌面 CLI 路径，并在连接语音前检查 Voice v3
-兼容性。启动应用不会自动启用开机自启。详见[运行时说明](docs/CODEX_RUNTIME.zh-CN.md)。
-## Windows 11 适配版
-
-Windows 独立入口使用本地中文唤醒/识别、Codex 文字任务和 Windows 中文播报。安装、运行、权限交互及已知限制见 [Windows 使用说明](docs/WINDOWS.md)。原 macOS 构建流程保留。
-
-Windows 版将全息地图作为 Jarvis 内部模块统一打包。地图界面运行在 Jarvis 主进程创建和管理的独立窗口中，通过专用 preload 和受限 IPC 接收附近搜索、路线规划指令；它不是单独安装或运行的软件，路线也不会交给外部地图客户端。使用前在 Jarvis 设置中填写高德地图 JS API Key 和安全密钥，并在高德控制台限制 Key 的使用范围。支持“帮我看看附近有什么美食”“附近咖啡馆”和“导航到郑州东站”等语音或输入框指令；当前位置不可用时会明确提示，不使用固定坐标代替定位。
-
-Windows 版也将 Rainform / 数据成雨作为 Jarvis 内部雨幕可视化模块统一打包。设置中填写和风天气 API Host 与 API Key 后，可说“现在离我们最近的哪个城市在下雨”或“郑州现在的雨有多大”；前者按设备定位查询 GeoNames 城市目录，后者直接定位指定城市。可视化显示当前实况与未来 24 小时逐时预报。Rainform 派生代码依据 PolyForm Noncommercial License 1.0.0，仅限非商业用途；城市目录依据 CC BY 4.0，署名和许可证随包提供。
+核心项目采用 [GNU GPL v3.0](LICENSE)。第三方模块和素材仍遵循各自许可证，重新分发前请查看随项目提供的许可和声明文件。
