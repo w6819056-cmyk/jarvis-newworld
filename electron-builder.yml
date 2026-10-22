@@ -1,0 +1,56 @@
+appId: com.jarvis.windows
+productName: Jarvis
+asar: true
+asarUnpack:
+  - dist-electron/windows-ui-automation.ps1
+  - node_modules/sherpa-onnx-win-x64/**/*
+  - node_modules/sherpa-onnx-node/**/*
+  - node_modules/onnxruntime-node/**/*
+npmRebuild: false
+electronDist: node_modules/electron/dist
+directories:
+  output: release/windows
+files:
+  - dist-electron/**/*
+  - dist-windows/**/*
+  - package.json
+  - LICENSE
+extraResources:
+  - from: runtime/models/jarvis-memory
+    to: models/jarvis-memory
+    filter:
+      - '*.json'
+      - '*.txt'
+      - 'onnx/*.onnx'
+  - from: runtime/models/sherpa-onnx-x-asr-480ms-streaming-zipformer-transducer-zh-en-int8-2026-06-05
+    to: runtime/models/sherpa-onnx-x-asr-480ms-streaming-zipformer-transducer-zh-en-int8-2026-06-05
+    filter:
+      - '*.onnx'
+      - tokens.txt
+      - README.md
+  - from: docs/THIRD-PARTY-NOTICES.md
+    to: THIRD-PARTY-NOTICES.md
+  - from: docs/licenses/X-ASR-LICENSE.txt
+    to: X-ASR-LICENSE.txt
+  - from: docs/licenses/APACHE-2.0.txt
+    to: APACHE-2.0.txt
+  - from: docs/licenses/THREE-MIT.txt
+    to: THREE-MIT.txt
+  - from: runtime/tools/czkawka/windows_czkawka_cli.exe
+    to: czkawka/czkawka.exe
+  - from: docs/licenses/CZKAWKA-CLI-MIT.txt
+    to: czkawka/LICENSE.txt
+  - from: docs/licenses/CZKAWKA-CLI-NOTICE.txt
+    to: czkawka/NOTICE.txt
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  artifactName: Jarvis-Windows-${version}-Setup.${ext}
+  signAndEditExecutable: false
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  runAfterFinish: false

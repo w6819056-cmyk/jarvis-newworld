@@ -2,7 +2,7 @@
 
 ## Goal
 
-Integrate `C:\Users\Kevin\Rainform` into Jarvis as a locally managed rainfall visualization module. A spoken or typed request can find the nearest Chinese prefecture-level city with current rain, report it, and show Rainform switched to that city. A named-city rain query follows the same display path.
+Integrate the user's local Rainform checkout into Jarvis as a locally managed rainfall visualization module. A spoken or typed request can find the nearest Chinese prefecture-level city with current rain, report it, and show Rainform switched to that city. A named-city rain query follows the same display path.
 
 ## User Flow
 

@@ -1,0 +1,155 @@
+/* Original cyan armor remains the focus. Controls use the original blue/amber/red palette. */
+.windows-shell{min-width:0;min-height:0;font-family:"Microsoft YaHei UI","Segoe UI",sans-serif;color:#eaf9ff}
+.windows-shell button,.windows-shell input{font:inherit}
+/* Use the original 0.2.0 avatar geometry and aura from style.css. */
+.windows-shell .helmet-scan{pointer-events:none}
+.win-toolbar{position:absolute;inset:18px 22px auto;display:flex;gap:8px;align-items:center;z-index:30;opacity:0;transition:opacity .2s}
+.win-toolbar button,.win-conversation button{width:36px;height:36px;border:1px solid #20c7ff55;border-radius:50%;background:#02121bd9;color:#8fdfff;cursor:pointer;font-size:20px}
+.win-brand{flex:1;font:600 14px Consolas,monospace;letter-spacing:.2em;color:#8fdfff;-webkit-app-region:drag;user-select:none}
+.win-brand small{font-size:9px;font-weight:400;opacity:.6;margin-left:10px}
+.win-controls{position:absolute;bottom:28px;left:24px;right:24px;z-index:30;display:flex;align-items:center;gap:18px;opacity:0;transition:opacity .2s}
+.win-controls button,.win-command input{-webkit-app-region:no-drag}
+.win-round{display:grid;place-items:center;width:54px;height:54px;flex-shrink:0;border:1px solid #20c7ff88;border-radius:50%;background:#02121be8;color:#20c7ff;cursor:pointer;box-shadow:0 0 22px #20c7ff20}
+.win-round svg{width:24px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
+.win-stop{color:#ff5b51;border-color:#ff5b5180}.win-stop svg{fill:currentColor;stroke:none}.win-round.is-paused{opacity:.5}
+.win-command{display:flex;align-items:center;flex:1;border:1px solid #20c7ff66;border-radius:24px;height:46px;padding:4px;background:#02121be8}
+.win-command input{min-width:0;flex:1;color:#eaf9ff;border:none;background:none;padding:8px 14px;outline:none;font-size:14px}
+.win-command input::placeholder{color:#87a9b9}
+.win-command button{border:0;border-radius:50%;width:36px;height:36px;background:#20c7ff22;color:#8fdfff;font-size:22px;cursor:pointer}
+.windows-shell.controls-visible .win-toolbar,.windows-shell.controls-visible .win-controls,.win-toolbar:focus-within,.win-controls:focus-within{opacity:1}
+.win-caption{position:absolute;bottom:96px;left:50%;transform:translateX(-50%);max-width:90%;display:flex;gap:9px;align-items:center;padding:8px 14px;border:1px solid #20c7ff28;border-radius:20px;background:#02121bd9;z-index:20;font-size:12px;color:#b8e5f5;box-shadow:0 2px 22px #0003;user-select:none}
+.win-caption i{width:5px;height:5px;background:#20c7ff;border-radius:50%;flex-shrink:0;box-shadow:0 0 8px #20c7ff}
+.win-caption span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.windows-shell[data-mode=working] .win-caption i{background:#ff9b2f}.windows-shell[data-mode=degraded] .win-caption i{background:#ff5b51}
+.win-conversation{position:absolute;inset:70px auto 165px 24px;width:min(410px,80%);z-index:32;border:1px solid #20c7ff55;background:#03121bf5;backdrop-filter:blur(18px);border-radius:12px;padding:18px 20px;overflow:auto;box-shadow:0 12px 60px #0008;font-size:13px;line-height:1.75}
+.win-conversation[hidden]{display:none}.win-conversation header{display:flex;align-items:center;justify-content:space-between;color:#8fdfff;margin-bottom:16px}.win-conversation button{width:28px;height:28px}.win-conversation label{display:block;color:#6c9aaa;font-size:11px}.win-conversation p{white-space:pre-wrap;overflow-wrap:anywhere;margin:4px 0 22px}
+.windows-shell .win-dialog{width:min(580px,92vw);max-height:86vh;margin:auto;border:1px solid #20c7ff70;border-radius:16px;background:#03121bf7;color:#eaf9ff;padding:26px 28px;box-shadow:0 24px 100px #0009;font:13px/1.7 "Microsoft YaHei UI","Segoe UI",sans-serif}
+.win-dialog::backdrop{background:#0005;backdrop-filter:blur(5px)}
+.win-dialog h2{font-size:20px;font-weight:500;letter-spacing:.04em;margin:0 0 12px;color:#b4eaff}
+.win-dialog p{color:#9dbfce;margin:10px 0 18px}.win-dialog label{display:block;margin:18px 0;color:#cde5ef}.win-dialog label small{display:block;font-size:11px;color:#7397a8}
+.win-dialog input{display:block;width:100%;margin-top:7px;padding:10px 12px;border:1px solid #20c7ff44;border-radius:7px;background:#010a11;color:#eaf9ff}
+.win-dialog button{padding:8px 14px;border:1px solid #20c7ff55;border-radius:7px;background:#0c2431;color:#bee9fa;cursor:pointer;font-size:12px}
+.win-dialog button.primary{background:#20c7ff;color:#02121b;border-color:#20c7ff;font-weight:600}
+.win-dialog .win-note{font-size:11px;color:#7397a8}.win-dialog #thread-note{font:10px/1.5 Consolas,monospace;overflow-wrap:anywhere;color:#7397a8}
+.win-dialog-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:22px}.win-settings-row{display:flex;gap:9px;flex-wrap:wrap}
+.win-dialog pre{font:11px/1.65 Consolas,monospace;max-height:210px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;background:#010a11;padding:12px;border-radius:7px;color:#9dbfce}
+.win-toast{position:absolute;inset:auto 8% 150px;z-index:80;padding:12px 16px;border:1px solid #ff9b2f66;border-radius:8px;background:#18130af5;color:#ffe2ba;font-size:12px;line-height:1.7;overflow-wrap:anywhere}
+.windows-shell button:focus-visible,.windows-shell input:focus-visible{outline:2px solid #8fdfff;outline-offset:3px}.windows-shell button:hover{filter:brightness(1.25)}
+@media(prefers-reduced-motion:reduce){.windows-shell *{animation:none!important;transition:none!important}.windows-shell .character-rig{transform:translate(-50%,-50%)}.windows-shell #particle-field{display:none}}
+/* The monitor is the canvas; the assistant remains a compact island at its center. */
+.windows-shell{--assistant-height:clamp(240px,54vh,480px)}
+.windows-shell .character-rig{width:calc(var(--assistant-height) * .76);height:var(--assistant-height);top:46%;animation:none;transform:translate(-50%,-50%)}
+.windows-shell .character-aura{inset:auto;left:50%;top:46%;width:480px;height:var(--assistant-height);transform:translate(-50%,-50%);filter:none}
+.windows-shell .helmet-character,.windows-shell:has(.character-rig:hover) .helmet-character{filter:saturate(1.08) contrast(1.1) drop-shadow(0 0 12px #20c7ff66);transition:none;transform:scale(var(--voice-pulse))}
+.windows-shell .win-toolbar{inset:auto;left:50%;top:calc(46% - var(--assistant-height) / 2 - 76px);width:min(420px,calc(100vw - 32px));transform:translateX(-50%);gap:16px;opacity:1}
+.windows-shell .win-brand{-webkit-app-region:no-drag;font-size:12px}
+.windows-shell #settings{width:78px;border-radius:18px;font-size:13px;flex-shrink:0}
+.windows-shell .win-controls{inset:auto;left:50%;top:calc(46% + var(--assistant-height) / 2 + 84px);width:min(440px,calc(100vw - 32px));transform:translateX(-50%);gap:24px;justify-content:center;opacity:1}
+.windows-shell .win-round{width:44px;height:44px;box-shadow:none}
+.windows-shell .win-round svg{width:20px}
+.windows-shell .win-command{height:44px;min-width:0;max-width:300px}
+.windows-shell .win-command input{width:100%;font-size:12px;padding:6px 10px}
+.windows-shell .win-command button{width:30px;height:30px;flex-shrink:0}
+.windows-shell .win-caption{bottom:auto;top:calc(46% + var(--assistant-height) / 2 + 24px);max-width:min(380px,90vw)}
+.windows-shell .win-conversation{inset:50% auto auto 50%;transform:translate(-50%,-50%);width:min(410px,calc(100vw - 32px));max-height:65vh;backdrop-filter:none}
+.windows-shell .archive-tabs{display:flex;gap:6px;margin:0 0 10px}.windows-shell .archive-tabs button{width:auto;height:30px;padding:0 12px;border-radius:16px;font-size:12px}.windows-shell .archive-tabs button[aria-pressed=true]{background:#0b3544;color:#dff8ff;border-color:#42d9ff}
+.windows-shell #archive-search{display:flex;gap:6px;margin-bottom:8px}.windows-shell #archive-search input{min-width:0;flex:1;border:1px solid #20c7ff44;border-radius:6px;background:#041923;color:#dff8ff;padding:7px 9px;font:inherit}.windows-shell #archive-search button{width:32px;height:32px;border-radius:6px}
+.windows-shell .archive-actions{display:flex;justify-content:flex-end;margin-bottom:8px}.windows-shell .archive-actions button{width:auto;height:28px;border-radius:14px;padding:0 10px;font-size:11px;color:#ffb6b0;border-color:#ff6e6655}
+.windows-shell .archive-results{display:grid;gap:8px;min-height:40px}.windows-shell .archive-results article{display:flex;gap:8px;align-items:flex-start;border:1px solid #20c7ff24;border-radius:7px;padding:8px;background:#041923aa}.windows-shell .archive-results article>div{min-width:0;flex:1}.windows-shell .archive-results strong{display:block;color:#dff8ff;font-weight:600;overflow-wrap:anywhere}.windows-shell .archive-results p{margin:3px 0;color:#a8cad5;white-space:pre-wrap;overflow-wrap:anywhere}.windows-shell .archive-results small{display:block;color:#6c9aaa;overflow-wrap:anywhere}.windows-shell .archive-results article>button{width:auto;height:26px;padding:0 8px;border-radius:13px;font-size:11px;color:#ffb6b0;border-color:#ff6e6655;flex-shrink:0}
+.windows-shell .win-toast{inset:auto;left:50%;top:calc(46% + var(--assistant-height) / 2 + 146px);width:min(400px,90vw);transform:translateX(-50%)}
+.windows-shell .armor-shard,.windows-shell .armor-shard.amber-edge{filter:none;will-change:auto}
+.windows-shell.is-forming .armor-shard{animation:windows-shard-assemble 4.2s cubic-bezier(.14,.68,.16,1) var(--shard-delay) both}
+.windows-shell.is-forming .helmet-character{animation:windows-materialize 4.2s ease-out both}
+.windows-shell.is-forming .assembly-orbits,.windows-shell.is-forming .assembly-flash{animation-duration:4.2s}
+.windows-shell .assembly-flash{filter:none}
+@keyframes windows-materialize{0%,40%{opacity:0;transform:scale(.94)}65%{opacity:.4}90%,100%{opacity:1;transform:scale(1)}}
+@keyframes windows-shard-assemble{0%{opacity:0;transform:translate(var(--shard-x),var(--shard-y)) rotate(var(--shard-rotation)) scale(.65)}12%{opacity:.7}65%{opacity:.85;transform:translate(0,0) rotate(0) scale(1)}100%{opacity:0;transform:translate(0,0) rotate(0) scale(1)}}
+
+/* Reveal controls by explicit helmet activation, never by hover or voice activity. */
+.windows-shell .win-toolbar,.windows-shell .win-controls,.windows-shell .win-caption{opacity:0;visibility:hidden;pointer-events:none;transition:none}
+.windows-shell.controls-visible .win-toolbar,.windows-shell.controls-visible .win-controls,.windows-shell.controls-visible .win-caption{opacity:1;visibility:visible;pointer-events:auto}
+.win-live-transcript{position:absolute;top:18px;left:18px;z-index:35;width:min(340px,calc(100vw - 36px));padding:10px 12px;border:1px solid #20c7ff55;border-radius:7px;background:#02121bf0;color:#b8e5f5;box-shadow:0 4px 22px #0005;font-size:12px;line-height:1.5;pointer-events:none}
+.win-live-transcript span{display:block;color:#67c9e8;font-size:10px}
+.win-live-transcript p{min-height:1.5em;max-height:4.5em;margin:3px 0 0;overflow:hidden;overflow-wrap:anywhere;white-space:pre-wrap;color:#eaf9ff}
+.windows-shell .character-rig{cursor:pointer;outline:none}
+.windows-shell.inspection-active .character-rig{left:75%;transition:left .82s cubic-bezier(.2,.78,.2,1)}
+.windows-shell:not(.inspection-active) .character-rig{left:50%;transition:left .82s cubic-bezier(.2,.78,.2,1)}
+.windows-shell .helmet-3d-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:5;pointer-events:none}
+.windows-shell .helmet-character.is-3d-hidden{opacity:0}
+.windows-shell .gesture-toggle{width:auto!important;min-width:64px;padding:0 10px;border-radius:18px!important;display:flex;align-items:center;justify-content:center;gap:6px;font-size:12px!important}
+.windows-shell .gesture-toggle svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.windows-shell .gesture-toggle[aria-pressed=true]{color:#7ee7ff;border-color:#20c7ff;background:#0b2834}
+.windows-shell .gesture-indicator{position:absolute;top:64px;right:22px;z-index:25;display:flex;align-items:center;gap:8px;max-width:min(430px,calc(100vw - 32px));flex-wrap:wrap;padding:7px 10px;border:1px solid #20c7ff55;border-radius:18px;background:#02121bd9;color:#a8d9e9;font-size:11px;pointer-events:none;user-select:none}
+.windows-shell .gesture-indicator[hidden]{display:none}
+.windows-shell .gesture-indicator b{padding:2px 7px;border:1px solid #20c7ff44;border-radius:12px;color:#c6f2ff;font-weight:500;white-space:nowrap}
+.windows-shell .gesture-indicator b[hidden]{display:none}
+.windows-shell .gesture-indicator #gesture-selected{border-color:#ffb24d66;color:#ffd39b}
+.windows-shell .gesture-indicator i{width:6px;height:6px;border-radius:50%;background:#20c7ff;box-shadow:0 0 8px #20c7ff}
+.windows-shell .gesture-indicator[data-state=requesting] i{background:#ffb24d;box-shadow:0 0 8px #ffb24d}
+.windows-shell .gesture-indicator[data-state=error] i{background:#ff5b51;box-shadow:0 0 8px #ff5b51}
+.windows-shell .gesture-preview{position:absolute;top:106px;right:22px;z-index:26;width:min(310px,calc(100vw - 28px));overflow:hidden;border:1px solid #20c7ff66;border-radius:8px;background:#03121bf2;color:#dff7ff;box-shadow:0 12px 36px #0008;backdrop-filter:blur(8px);font-size:11px}
+.windows-shell .gesture-preview[hidden]{display:none}
+.windows-shell .gesture-preview>header{height:34px;display:flex;align-items:center;justify-content:space-between;padding:0 8px 0 12px;border-bottom:1px solid #20c7ff30;color:#a9eaff;font-weight:600}
+.windows-shell .gesture-preview>header>span{display:flex;align-items:center;gap:7px}
+.windows-shell .gesture-preview>header i{width:6px;height:6px;border-radius:50%;background:#ff5b51;box-shadow:0 0 8px #ff5b51}
+.windows-shell .gesture-preview[data-camera=on]>header i{background:#4ee0a1;box-shadow:0 0 8px #4ee0a1}
+.windows-shell #gesture-preview-collapse{display:grid;place-items:center;width:24px;height:24px;padding:0;border:1px solid #20c7ff44;border-radius:4px;background:#06202b;color:#b8efff;font-size:16px;line-height:1;cursor:pointer}
+.windows-shell .gesture-preview-content{padding:9px}
+.windows-shell .gesture-preview-viewport{position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;border:1px solid #20c7ff33;border-radius:4px;background:radial-gradient(ellipse at center,#0a2935,#02080d 75%)}
+.windows-shell .gesture-preview-video{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;opacity:1!important;object-fit:cover;transform:scaleX(-1)}
+.windows-shell #gesture-preview-overlay{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.windows-shell #gesture-preview-empty{position:absolute;inset:0;z-index:1;display:grid;place-items:center;color:#789aaa;font-size:11px}
+.windows-shell #gesture-preview-empty[hidden]{display:none}
+.windows-shell .gesture-preview-hands{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.windows-shell .gesture-preview-hands>span{padding:4px 6px;border:1px solid #20c7ff38;border-radius:4px;background:#061a24;color:#a8eaff;font-size:10px}
+.windows-shell .gesture-preview-hands>span.gesture-preview-right{border-color:#ffb24d66;color:#ffd39b}
+.windows-shell .gesture-preview-head{display:flex;justify-content:space-between;align-items:center;margin-top:7px;padding-top:6px;border-top:1px solid #20c7ff24;color:#769cac}
+.windows-shell .gesture-preview-head b{color:#d5f5ff;font-weight:500}
+.windows-shell .gesture-preview-mode{margin-top:5px;color:#789aaa;font-size:10px;line-height:1.5}
+.windows-shell .gesture-preview.is-collapsed .gesture-preview-content{display:none}
+.windows-shell .gesture-preview.is-collapsed>header{border-bottom:0}
+.windows-shell .character-rig:focus-visible .helmet-character{filter:saturate(1.15) contrast(1.1) drop-shadow(0 0 18px #8fdfff99)}
+.windows-shell[data-mode=working] .helmet-character,.windows-shell[data-mode=working]:has(.character-rig:hover) .helmet-character{filter:saturate(1.12) contrast(1.1) drop-shadow(0 0 20px rgba(255,155,47,.56)) drop-shadow(0 0 48px rgba(255,155,47,.28))}
+.windows-shell[data-mode=working] .character-aura{background:radial-gradient(ellipse,rgba(255,155,47,.18),rgba(255,155,47,.06) 50%,transparent 74%)}
+.windows-shell[data-mode=working] .helmet-scan{opacity:.72;animation-duration:2.2s}
+.windows-shell[data-mode=working] .character-rig{animation:windows-thinking 2.6s ease-in-out infinite}
+.windows-shell[data-status=approval] .character-rig{animation:windows-approval-nod 1.8s ease-in-out both}
+@keyframes windows-thinking{0%,100%{transform:translate(-50%,-50%) rotate(0)}38%{transform:translate(calc(-50% - 1px),calc(-50% + 1px)) rotate(-.22deg)}70%{transform:translate(calc(-50% + 1px),calc(-50% - 1px)) rotate(.2deg)}}
+@keyframes windows-approval-nod{0%,100%{transform:translate(-50%,-50%) rotate(0)}28%,72%{transform:translate(calc(-50% + 5px),calc(-50% - 2px)) rotate(1.2deg) scale(1.01)}48%{transform:translate(calc(-50% + 3px),calc(-50% - 5px)) rotate(.7deg) scale(1.014)}}
+
+@media(max-height:600px){
+  .windows-shell{--assistant-height:clamp(180px,48vh,300px)}
+  .windows-shell .win-toolbar{top:calc(46% - var(--assistant-height) / 2 - 64px)}
+  .windows-shell .win-controls{top:calc(46% + var(--assistant-height) / 2 + 72px)}
+}
+@media(max-width:480px){.windows-shell .win-controls{gap:16px}.windows-shell .win-toolbar{gap:12px}}
+@media(max-width:520px){.windows-shell .gesture-preview{top:98px;right:10px;width:min(270px,calc(100vw - 20px))}.windows-shell .gesture-preview-content{padding:7px}}
+.windows-shell .win-hud-stack{position:absolute;left:calc(50% + clamp(150px,20vw,240px));right:24px;top:50%;transform:translateY(-50%);z-index:24;width:min(620px,calc(100vw - (50% + clamp(150px,20vw,240px)) - 24px));min-width:0;max-height:min(72vh,760px);overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#20c7ff55 transparent;pointer-events:auto;container-type:inline-size}
+.windows-shell .win-hud-stack[hidden]{display:none}
+.windows-shell .win-hud-list{display:grid;gap:10px;padding:2px 8px 2px 2px}
+.windows-shell .win-hud-card{overflow:hidden;border:1px solid #20c7ff70;border-left:2px solid #20c7ff;background:linear-gradient(110deg,#03131bea,#061e29e8);box-shadow:0 6px 24px #0006,0 0 16px #20c7ff14;backdrop-filter:blur(8px);animation:windows-hud-arrive .24s ease-out both}
+.windows-shell .win-hud-card[data-pending=true]{border-left-color:#ffb24d}
+.windows-shell .win-hud-card>header{display:flex;align-items:center;justify-content:space-between;min-height:32px;padding:0 8px 0 11px;border-bottom:1px solid #20c7ff25;color:#76d7f3;font:10px/1 Consolas,monospace}
+.windows-shell .win-hud-card>header button{display:grid;place-items:center;width:24px;height:24px;padding:0;border:0;background:transparent;color:#83b8c8;font-size:18px;cursor:pointer}
+.windows-shell .win-hud-card>header button:hover{color:#fff;background:#20c7ff20}
+.windows-shell .win-hud-card>p{max-height:24vh;overflow:auto;margin:0;padding:11px 12px;color:#e6f7fc;font-size:13px;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere}
+.windows-shell .win-weather-card{width:100%;min-width:0}
+.windows-shell .win-weather-card .weather-content{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:10px;padding:10px}
+.windows-shell .win-weather-card .weather-map-frame{position:relative;min-width:0}
+.windows-shell .win-weather-card .weather-map{width:100%;height:220px;min-width:0;border:1px solid #20c7ff55;background:#061821;filter:saturate(.75) brightness(.78)}
+.windows-shell .win-weather-card .weather-map-status{position:absolute;inset:1px;z-index:500;display:grid;place-items:center;padding:10px;text-align:center;color:#9bd8e8;background:#061821c9;font-size:11px;pointer-events:none}
+.windows-shell .win-weather-card .weather-map-status[hidden]{display:none}
+.windows-shell .win-weather-card .leaflet-control-attribution{font-size:8px;background:#03131dcc;color:#89aeb8}
+.windows-shell .win-weather-card .leaflet-control-attribution a{color:#87dff5}
+.windows-shell .win-weather-card .weather-summary{display:grid;align-content:center;gap:8px;min-width:0;color:#dff8ff}
+.windows-shell .win-weather-card .weather-location{display:grid;gap:3px;color:#78cbe2;font-size:10px;text-transform:uppercase;letter-spacing:.08em}
+.windows-shell .win-weather-card .weather-location strong{overflow:hidden;color:#f0fcff;font-size:16px;letter-spacing:0;text-overflow:ellipsis;white-space:nowrap}
+.windows-shell .win-weather-card .weather-main{display:flex;align-items:center;gap:8px}
+.windows-shell .win-weather-card .weather-icon{color:#ffcf75;font-size:29px;line-height:1}
+.windows-shell .win-weather-card .weather-temperature{font-size:25px;line-height:1}
+.windows-shell .win-weather-card .weather-condition{color:#a8d8e5;font-size:12px}
+.windows-shell .win-weather-card .weather-details{color:#78aebd;font-size:10px;line-height:1.6;overflow-wrap:anywhere;word-break:break-word}
+.windows-shell.inspection-active .win-hud-stack{left:2vw;right:auto;width:min(520px,42vw)}
+@keyframes windows-hud-arrive{from{opacity:0;transform:translateX(8px)}to{opacity:1;transform:translateX(0)}}
+@container (max-width:500px){.windows-shell .win-weather-card .weather-content{grid-template-columns:1fr}.windows-shell .win-weather-card .weather-map{height:180px}}
+@media(max-width:700px){.windows-shell .win-hud-stack{left:4vw;right:4vw;top:auto;bottom:calc(14vh + 8px);transform:none;width:auto;max-height:32vh}.windows-shell.inspection-active .win-hud-stack{left:4vw;right:4vw;width:auto}.windows-shell .win-weather-card{width:100%;min-width:0}.windows-shell .win-weather-card .weather-content{grid-template-columns:1fr}.windows-shell .win-weather-card .weather-map{height:150px}}

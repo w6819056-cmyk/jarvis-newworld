@@ -1,0 +1,262 @@
+@import './base.css';
+
+:root {
+  --hud-primary: #00f3ff;
+  --hud-secondary: #0066ff;
+  --hud-glow: rgba(0, 243, 255, 0.45);
+  --hud-border: rgba(0, 243, 255, 0.35);
+  --hud-bg-panel: rgba(2, 10, 22, 0.82);
+}
+
+/* JARVIS 科技感扫描线条动画 */
+@keyframes jarvisScanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+@keyframes radarSweep {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.45; filter: drop-shadow(0 0 4px var(--hud-primary)); }
+  50% { opacity: 0.95; filter: drop-shadow(0 0 14px var(--hud-primary)); }
+}
+
+@keyframes cornerBlink {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 0.25; }
+}
+
+/* 切角全息卡片战术样式 */
+.hud-corner-panel {
+  background: var(--hud-bg-panel);
+  border: 1px solid var(--hud-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.hud-corner-panel::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid var(--hud-primary);
+  border-left: 2px solid var(--hud-primary);
+  pointer-events: none;
+}
+
+.hud-corner-panel::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 9px;
+  height: 9px;
+  border-bottom: 2px solid var(--hud-primary);
+  border-right: 2px solid var(--hud-primary);
+  pointer-events: none;
+}
+
+/* 四角战术切角标记 */
+.hud-corner-tl {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 28px;
+  height: 28px;
+  border-top: 2px solid var(--hud-primary);
+  border-left: 2px solid var(--hud-primary);
+  pointer-events: none;
+  z-index: 20;
+}
+.hud-corner-tr {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 28px;
+  height: 28px;
+  border-top: 2px solid var(--hud-primary);
+  border-right: 2px solid var(--hud-primary);
+  pointer-events: none;
+  z-index: 20;
+}
+.hud-corner-bl {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  width: 28px;
+  height: 28px;
+  border-bottom: 2px solid var(--hud-primary);
+  border-left: 2px solid var(--hud-primary);
+  pointer-events: none;
+  z-index: 20;
+}
+.hud-corner-br {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  width: 28px;
+  height: 28px;
+  border-bottom: 2px solid var(--hud-primary);
+  border-right: 2px solid var(--hud-primary);
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* 战术按钮微交互 */
+.hud-btn {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid var(--hud-border);
+  color: var(--hud-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  outline: none;
+}
+
+.hud-btn:hover {
+  background: var(--hud-border);
+  box-shadow: 0 0 12px var(--hud-glow);
+  transform: translateY(-1px);
+}
+
+.hud-btn:active {
+  transform: translateY(0);
+}
+
+.hud-btn.active {
+  background: var(--hud-primary);
+  color: #010409;
+  font-weight: bold;
+  box-shadow: 0 0 14px var(--hud-glow);
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--hud-border);
+  border-radius: 2px;
+}
+
+/* 战术全息地标悬浮标签 (AMap Marker) */
+.holo-landmark-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: auto;
+  cursor: pointer;
+  transform: translate(-50%, -100%);
+  user-select: none;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.25s ease;
+}
+
+.holo-landmark-marker:hover {
+  transform: translate(-50%, -106%) scale(1.06);
+  filter: drop-shadow(0 0 10px var(--hud-primary));
+}
+
+.holo-landmark-marker.active-marker .holo-landmark-card {
+  border-color: var(--hud-primary);
+  box-shadow: 0 0 16px var(--hud-glow);
+  background: rgba(0, 243, 255, 0.16);
+}
+
+.holo-landmark-card {
+  background: var(--hud-bg-panel);
+  border: 1px solid var(--hud-border);
+  padding: 4px 10px;
+  border-radius: 2px;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.85);
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.holo-landmark-card::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 6px;
+  height: 6px;
+  border-top: 1.5px solid var(--hud-primary);
+  border-left: 1.5px solid var(--hud-primary);
+}
+
+.holo-landmark-card::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 6px;
+  height: 6px;
+  border-bottom: 1.5px solid var(--hud-primary);
+  border-right: 1.5px solid var(--hud-primary);
+}
+
+.holo-landmark-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.holo-landmark-name {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.9);
+}
+
+.holo-landmark-altitude {
+  font-size: 10px;
+  color: var(--hud-primary);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1px 4px;
+  border: 1px solid var(--hud-border);
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+.holo-landmark-sub {
+  font-size: 9px;
+  color: var(--hud-primary);
+  opacity: 0.8;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.holo-landmark-pin {
+  width: 1px;
+  height: 32px;
+  background: linear-gradient(to bottom, var(--hud-primary), transparent);
+  margin-top: 2px;
+}
+
+.holo-landmark-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--hud-primary);
+  box-shadow: 0 0 8px var(--hud-primary);
+}

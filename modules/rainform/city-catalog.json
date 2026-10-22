@@ -1,0 +1,2845 @@
+{
+  "source": "GeoNames CN extract (CC BY 4.0), downloaded 2026-10-22",
+  "cities": [
+    {
+      "id": "1279681",
+      "name": "曲水",
+      "sourceName": "Quxu",
+      "latitude": 29.3554,
+      "longitude": 90.73214,
+      "countryCode": "CN",
+      "admin1Code": "14",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1812101",
+      "name": "东营市",
+      "sourceName": "Dongying",
+      "latitude": 37.46271,
+      "longitude": 118.49165,
+      "countryCode": "CN",
+      "admin1Code": "25",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1812545",
+      "name": "东莞",
+      "sourceName": "Dongguan",
+      "latitude": 23.01797,
+      "longitude": 113.74866,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1812749",
+      "name": "定西",
+      "sourceName": "Dingxi",
+      "latitude": 35.57088,
+      "longitude": 104.62303,
+      "countryCode": "CN",
+      "admin1Code": "15",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1812955",
+      "name": "徳州市",
+      "sourceName": "Dezhou",
+      "latitude": 37.44661,
+      "longitude": 116.36706,
+      "countryCode": "CN",
+      "admin1Code": "25",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1812961",
+      "name": "徳陽市",
+      "sourceName": "Deyang",
+      "latitude": 31.13019,
+      "longitude": 104.38198,
+      "countryCode": "CN",
+      "admin1Code": "32",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1813171",
+      "name": "张家界",
+      "sourceName": "Zhangjiajie",
+      "latitude": 29.12944,
+      "longitude": 110.47833,
+      "countryCode": "CN",
+      "admin1Code": "11",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1813253",
+      "name": "丽江市",
+      "sourceName": "Lijiang",
+      "latitude": 26.86879,
+      "longitude": 100.22072,
+      "countryCode": "CN",
+      "admin1Code": "29",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1813325",
+      "name": "达州",
+      "sourceName": "Dazhou",
+      "latitude": 31.2106,
+      "longitude": 107.46308,
+      "countryCode": "CN",
+      "admin1Code": "32",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1814093",
+      "name": "大理",
+      "sourceName": "Dali",
+      "latitude": 25.58474,
+      "longitude": 100.21229,
+      "countryCode": "CN",
+      "admin1Code": "29",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1814757",
+      "name": "州市",
+      "sourceName": "Chuzhou",
+      "latitude": 32.32194,
+      "longitude": 118.29778,
+      "countryCode": "CN",
+      "admin1Code": "01",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1814760",
+      "name": "楚雄",
+      "sourceName": "Chuxiong",
+      "latitude": 25.03639,
+      "longitude": 101.54556,
+      "countryCode": "CN",
+      "admin1Code": "29",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1814906",
+      "name": "重庆",
+      "sourceName": "Chongqing",
+      "latitude": 29.56026,
+      "longitude": 106.55771,
+      "countryCode": "CN",
+      "admin1Code": "33",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1814934",
+      "name": "池州",
+      "sourceName": "Chizhou",
+      "latitude": 30.66134,
+      "longitude": 117.47783,
+      "countryCode": "CN",
+      "admin1Code": "01",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1815059",
+      "name": "郴州",
+      "sourceName": "Chenzhou",
+      "latitude": 25.8,
+      "longitude": 113.03333,
+      "countryCode": "CN",
+      "admin1Code": "11",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1815286",
+      "name": "天府",
+      "sourceName": "Chengdu",
+      "latitude": 30.66667,
+      "longitude": 104.06667,
+      "countryCode": "CN",
+      "admin1Code": "32",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1815395",
+      "name": "潮州",
+      "sourceName": "Chaozhou",
+      "latitude": 23.65396,
+      "longitude": 116.62262,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1815456",
+      "name": "常州",
+      "sourceName": "Changzhou",
+      "latitude": 31.77359,
+      "longitude": 119.95401,
+      "countryCode": "CN",
+      "admin1Code": "04",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1817993",
+      "name": "安庆",
+      "sourceName": "Anqing",
+      "latitude": 30.51365,
+      "longitude": 117.04723,
+      "countryCode": "CN",
+      "admin1Code": "01",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1817968",
+      "name": "安順",
+      "sourceName": "Anshun",
+      "latitude": 26.25,
+      "longitude": 105.93333,
+      "countryCode": "CN",
+      "admin1Code": "18",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1817240",
+      "name": "白銀",
+      "sourceName": "Baiyin",
+      "latitude": 36.54696,
+      "longitude": 104.17023,
+      "countryCode": "CN",
+      "admin1Code": "15",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1816971",
+      "name": "保定",
+      "sourceName": "Baoding",
+      "latitude": 38.87288,
+      "longitude": 115.46246,
+      "countryCode": "CN",
+      "admin1Code": "10",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1816920",
+      "name": "邵阳市",
+      "sourceName": "Shaoyang",
+      "latitude": 27.23818,
+      "longitude": 111.46214,
+      "countryCode": "CN",
+      "admin1Code": "11",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1816868",
+      "name": "马尔康市",
+      "sourceName": "Barkam",
+      "latitude": 31.90059,
+      "longitude": 102.22092,
+      "countryCode": "CN",
+      "admin1Code": "32",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1811720",
+      "name": "恩施",
+      "sourceName": "Enshi",
+      "latitude": 30.3,
+      "longitude": 109.48333,
+      "countryCode": "CN",
+      "admin1Code": "12",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1816705",
+      "name": "北海",
+      "sourceName": "Beihai",
+      "latitude": 21.48349,
+      "longitude": 109.11549,
+      "countryCode": "CN",
+      "admin1Code": "16",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1816373",
+      "name": "毕节",
+      "sourceName": "Bijie",
+      "latitude": 27.30193,
+      "longitude": 105.28627,
+      "countryCode": "CN",
+      "admin1Code": "18",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1816336",
+      "name": "浜州市",
+      "sourceName": "Binzhou",
+      "latitude": 37.36667,
+      "longitude": 118.01667,
+      "countryCode": "CN",
+      "admin1Code": "25",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1816269",
+      "name": "百城",
+      "sourceName": "Baise",
+      "latitude": 23.89013,
+      "longitude": 106.62684,
+      "countryCode": "CN",
+      "admin1Code": "16",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1816234",
+      "name": "亳州",
+      "sourceName": "Bozhou",
+      "latitude": 33.87722,
+      "longitude": 115.77028,
+      "countryCode": "CN",
+      "admin1Code": "01",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1816080",
+      "name": "沧州",
+      "sourceName": "Cangzhou",
+      "latitude": 38.31124,
+      "longitude": 116.85334,
+      "countryCode": "CN",
+      "admin1Code": "10",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1815577",
+      "name": "長沙",
+      "sourceName": "Changsha",
+      "latitude": 28.19874,
+      "longitude": 112.97087,
+      "countryCode": "CN",
+      "admin1Code": "11",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1816670",
+      "name": "北京",
+      "sourceName": "Beijing",
+      "latitude": 39.9075,
+      "longitude": 116.39723,
+      "countryCode": "CN",
+      "admin1Code": "22",
+      "featureCode": "PPLC"
+    },
+    {
+      "id": "1811103",
+      "name": "仏山市",
+      "sourceName": "Foshan",
+      "latitude": 23.02677,
+      "longitude": 113.13148,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1810845",
+      "name": "阜阳市",
+      "sourceName": "Fuyang",
+      "latitude": 32.9,
+      "longitude": 115.81667,
+      "countryCode": "CN",
+      "admin1Code": "01",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1810821",
+      "name": "福州",
+      "sourceName": "Fuzhou",
+      "latitude": 26.06139,
+      "longitude": 119.30611,
+      "countryCode": "CN",
+      "admin1Code": "07",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1807689",
+      "name": "怀化市",
+      "sourceName": "Huaihua",
+      "latitude": 27.56337,
+      "longitude": 110.00404,
+      "countryCode": "CN",
+      "admin1Code": "11",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1807234",
+      "name": "黃石市",
+      "sourceName": "Huangshi",
+      "latitude": 30.24706,
+      "longitude": 115.04814,
+      "countryCode": "CN",
+      "admin1Code": "12",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1806776",
+      "name": "恵州",
+      "sourceName": "Huizhou",
+      "latitude": 23.11147,
+      "longitude": 114.41523,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1806535",
+      "name": "吴兴",
+      "sourceName": "Huzhou",
+      "latitude": 30.8703,
+      "longitude": 120.0933,
+      "countryCode": "CN",
+      "admin1Code": "02",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1806488",
+      "name": "嘉积",
+      "sourceName": "Qionghai",
+      "latitude": 19.2425,
+      "longitude": 110.46417,
+      "countryCode": "CN",
+      "admin1Code": "31",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1806466",
+      "name": "广元",
+      "sourceName": "Guangyuan",
+      "latitude": 32.44201,
+      "longitude": 105.823,
+      "countryCode": "CN",
+      "admin1Code": "32",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1807700",
+      "name": "淮北",
+      "sourceName": "Huaibei",
+      "latitude": 33.97444,
+      "longitude": 116.79167,
+      "countryCode": "CN",
+      "admin1Code": "01",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1806445",
+      "name": "吉安",
+      "sourceName": "Ji’an",
+      "latitude": 27.11716,
+      "longitude": 114.97927,
+      "countryCode": "CN",
+      "admin1Code": "03",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1806299",
+      "name": "江門",
+      "sourceName": "Jiangmen",
+      "latitude": 22.58333,
+      "longitude": 113.08333,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1806097",
+      "name": "宁德",
+      "sourceName": "Ningde",
+      "latitude": 26.66167,
+      "longitude": 119.52278,
+      "countryCode": "CN",
+      "admin1Code": "07",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1805987",
+      "name": "焦作",
+      "sourceName": "Jiaozuo",
+      "latitude": 35.23925,
+      "longitude": 113.23914,
+      "countryCode": "CN",
+      "admin1Code": "09",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1805953",
+      "name": "嘉兴",
+      "sourceName": "Jiaxing",
+      "latitude": 30.7522,
+      "longitude": 120.75,
+      "countryCode": "CN",
+      "admin1Code": "02",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1805753",
+      "name": "济南",
+      "sourceName": "Jinan",
+      "latitude": 36.66833,
+      "longitude": 116.99722,
+      "countryCode": "CN",
+      "admin1Code": "25",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1805741",
+      "name": "晉城",
+      "sourceName": "Jincheng",
+      "latitude": 35.50222,
+      "longitude": 112.83278,
+      "countryCode": "CN",
+      "admin1Code": "24",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1806408",
+      "name": "阳江",
+      "sourceName": "Yangjiang",
+      "latitude": 21.85563,
+      "longitude": 111.96272,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1886760",
+      "name": "苏州",
+      "sourceName": "Suzhou",
+      "latitude": 31.30408,
+      "longitude": 120.59538,
+      "countryCode": "CN",
+      "admin1Code": "04",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1808198",
+      "name": "沢市",
+      "sourceName": "Heze",
+      "latitude": 35.23929,
+      "longitude": 115.47358,
+      "countryCode": "CN",
+      "admin1Code": "25",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1808392",
+      "name": "衡水",
+      "sourceName": "Hengshui",
+      "latitude": 37.73908,
+      "longitude": 115.68348,
+      "countryCode": "CN",
+      "admin1Code": "10",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1810820",
+      "name": "抚州",
+      "sourceName": "Fuzhou",
+      "latitude": 27.95999,
+      "longitude": 116.33333,
+      "countryCode": "CN",
+      "admin1Code": "03",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1810638",
+      "name": "州市",
+      "sourceName": "Ganzhou",
+      "latitude": 25.84664,
+      "longitude": 114.9326,
+      "countryCode": "CN",
+      "admin1Code": "03",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1809858",
+      "name": "广州",
+      "sourceName": "Guangzhou",
+      "latitude": 23.11667,
+      "longitude": 113.25,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1809532",
+      "name": "貴港",
+      "sourceName": "Guigang",
+      "latitude": 23.11603,
+      "longitude": 109.59472,
+      "countryCode": "CN",
+      "admin1Code": "16",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1809498",
+      "name": "桂林",
+      "sourceName": "Guilin",
+      "latitude": 25.28022,
+      "longitude": 110.29639,
+      "countryCode": "CN",
+      "admin1Code": "16",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1809461",
+      "name": "貴陽",
+      "sourceName": "Guiyang",
+      "latitude": 26.58333,
+      "longitude": 106.71667,
+      "countryCode": "CN",
+      "admin1Code": "18",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1808316",
+      "name": "益阳",
+      "sourceName": "Heshan",
+      "latitude": 28.56938,
+      "longitude": 112.34733,
+      "countryCode": "CN",
+      "admin1Code": "11",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1809152",
+      "name": "固原",
+      "sourceName": "Guyuan",
+      "latitude": 36.00667,
+      "longitude": 106.28083,
+      "countryCode": "CN",
+      "admin1Code": "21",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1808963",
+      "name": "邯郸",
+      "sourceName": "Handan",
+      "latitude": 36.60999,
+      "longitude": 114.48764,
+      "countryCode": "CN",
+      "admin1Code": "10",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1808956",
+      "name": "潞安",
+      "sourceName": "Changzhi",
+      "latitude": 36.18389,
+      "longitude": 113.10528,
+      "countryCode": "CN",
+      "admin1Code": "24",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1808926",
+      "name": "杭州",
+      "sourceName": "Hangzhou",
+      "latitude": 30.29365,
+      "longitude": 120.16142,
+      "countryCode": "CN",
+      "admin1Code": "02",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1808857",
+      "name": "汉中",
+      "sourceName": "Hanzhong",
+      "latitude": 33.07507,
+      "longitude": 107.02214,
+      "countryCode": "CN",
+      "admin1Code": "26",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1808770",
+      "name": "鶴壁",
+      "sourceName": "Hebi",
+      "latitude": 35.73231,
+      "longitude": 114.28616,
+      "countryCode": "CN",
+      "admin1Code": "09",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1808722",
+      "name": "合肥",
+      "sourceName": "Hefei",
+      "latitude": 31.86389,
+      "longitude": 117.28083,
+      "countryCode": "CN",
+      "admin1Code": "01",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1809078",
+      "name": "海口",
+      "sourceName": "Haikou",
+      "latitude": 20.03421,
+      "longitude": 110.34651,
+      "countryCode": "CN",
+      "admin1Code": "31",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1805733",
+      "name": "金昌",
+      "sourceName": "Jinchang",
+      "latitude": 38.50062,
+      "longitude": 102.19379,
+      "countryCode": "CN",
+      "admin1Code": "15",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1916012",
+      "name": "五指山市",
+      "sourceName": "Wuzhishan",
+      "latitude": 18.78229,
+      "longitude": 109.5013,
+      "countryCode": "CN",
+      "admin1Code": "31",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2033370",
+      "name": "営口",
+      "sourceName": "Yingkou",
+      "latitude": 40.66472,
+      "longitude": 122.23176,
+      "countryCode": "CN",
+      "admin1Code": "19",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "8335361",
+      "name": "乌兰察布市",
+      "sourceName": "Ulanqab",
+      "latitude": 40.993,
+      "longitude": 113.133,
+      "countryCode": "CN",
+      "admin1Code": "20",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "8400694",
+      "name": "台州",
+      "sourceName": "Taizhou",
+      "latitude": 28.66266,
+      "longitude": 121.43312,
+      "countryCode": "CN",
+      "admin1Code": "02",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "8505006",
+      "name": "文山",
+      "sourceName": "Wenshan City",
+      "latitude": 23.36306,
+      "longitude": 104.25047,
+      "countryCode": "CN",
+      "admin1Code": "29",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "8537264",
+      "name": "黃岡",
+      "sourceName": "Huanggang",
+      "latitude": 30.45143,
+      "longitude": 114.87035,
+      "countryCode": "CN",
+      "admin1Code": "12",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "9072919",
+      "name": "日照",
+      "sourceName": "Rizhao",
+      "latitude": 35.41414,
+      "longitude": 119.52908,
+      "countryCode": "CN",
+      "admin1Code": "25",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "9181182",
+      "name": "濮阳",
+      "sourceName": "Puyang",
+      "latitude": 35.75641,
+      "longitude": 115.04363,
+      "countryCode": "CN",
+      "admin1Code": "09",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "10630003",
+      "name": "徐州",
+      "sourceName": "Xuzhou",
+      "latitude": 34.20442,
+      "longitude": 117.28386,
+      "countryCode": "CN",
+      "admin1Code": "04",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "10794003",
+      "name": "盘锦市",
+      "sourceName": "Panjin",
+      "latitude": 41.121,
+      "longitude": 122.0739,
+      "countryCode": "CN",
+      "admin1Code": "19",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "10859300",
+      "name": "连云港",
+      "sourceName": "Lianyungang",
+      "latitude": 34.59845,
+      "longitude": 119.21556,
+      "countryCode": "CN",
+      "admin1Code": "04",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "10942283",
+      "name": "晋中市",
+      "sourceName": "Jinzhong",
+      "latitude": 37.68403,
+      "longitude": 112.75471,
+      "countryCode": "CN",
+      "admin1Code": "24",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "10942359",
+      "name": "宝鶏市",
+      "sourceName": "Baoji",
+      "latitude": 34.36775,
+      "longitude": 107.23705,
+      "countryCode": "CN",
+      "admin1Code": "26",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "11778484",
+      "name": "陇南",
+      "sourceName": "Longnan",
+      "latitude": 33.39791,
+      "longitude": 104.91703,
+      "countryCode": "CN",
+      "admin1Code": "15",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "11995100",
+      "name": "巴中",
+      "sourceName": "Bazhong",
+      "latitude": 31.8694,
+      "longitude": 106.74432,
+      "countryCode": "CN",
+      "admin1Code": "32",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "12022102",
+      "name": "图木舒克",
+      "sourceName": "Tumxuk",
+      "latitude": 39.86984,
+      "longitude": 79.06118,
+      "countryCode": "CN",
+      "admin1Code": "13",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "12159964",
+      "name": "崇左",
+      "sourceName": "Chongzuo",
+      "latitude": 22.38161,
+      "longitude": 107.3683,
+      "countryCode": "CN",
+      "admin1Code": "16",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "12256566",
+      "name": "玉林",
+      "sourceName": "Yulin",
+      "latitude": 22.65541,
+      "longitude": 110.17819,
+      "countryCode": "CN",
+      "admin1Code": "16",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "12269572",
+      "name": "防城港",
+      "sourceName": "Fangchenggang",
+      "latitude": 21.76945,
+      "longitude": 108.35661,
+      "countryCode": "CN",
+      "admin1Code": "16",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "13527052",
+      "name": "Chéngguān Qū",
+      "sourceName": "Chéngguān Qū",
+      "latitude": 29.63842,
+      "longitude": 91.04441,
+      "countryCode": "CN",
+      "admin1Code": "14",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "13527051",
+      "name": "Lhünzhub",
+      "sourceName": "Lhünzhub",
+      "latitude": 29.8931,
+      "longitude": 91.26166,
+      "countryCode": "CN",
+      "admin1Code": "14",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "13512708",
+      "name": "Nyingchi",
+      "sourceName": "Nyingchi",
+      "latitude": 29.64885,
+      "longitude": 94.35509,
+      "countryCode": "CN",
+      "admin1Code": "14",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "13512505",
+      "name": "吕梁市",
+      "sourceName": "Lüliang",
+      "latitude": 37.5192,
+      "longitude": 111.14436,
+      "countryCode": "CN",
+      "admin1Code": "24",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "13512504",
+      "name": "西海镇",
+      "sourceName": "Xihai Town",
+      "latitude": 36.95462,
+      "longitude": 100.89951,
+      "countryCode": "CN",
+      "admin1Code": "06",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "13512503",
+      "name": "泸水市",
+      "sourceName": "Lushui",
+      "latitude": 25.8232,
+      "longitude": 98.85853,
+      "countryCode": "CN",
+      "admin1Code": "29",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "8309983",
+      "name": "福州",
+      "sourceName": "Fuzhou",
+      "latitude": 26.07711,
+      "longitude": 119.29153,
+      "countryCode": "CN",
+      "admin1Code": "07",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "13512502",
+      "name": "蒙自市",
+      "sourceName": "Mengzi",
+      "latitude": 23.36779,
+      "longitude": 103.38212,
+      "countryCode": "CN",
+      "admin1Code": "29",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "12548253",
+      "name": "呼伦贝尔",
+      "sourceName": "Hulunbuir",
+      "latitude": 49.21141,
+      "longitude": 119.75582,
+      "countryCode": "CN",
+      "admin1Code": "20",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "12446699",
+      "name": "大兴安岭",
+      "sourceName": "Daxing’anling",
+      "latitude": 52.33385,
+      "longitude": 124.71242,
+      "countryCode": "CN",
+      "admin1Code": "08",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "12382279",
+      "name": "三沙市",
+      "sourceName": "Sansha",
+      "latitude": 16.83912,
+      "longitude": 112.34064,
+      "countryCode": "CN",
+      "admin1Code": "31",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "12359313",
+      "name": "庆阳",
+      "sourceName": "Qingyang",
+      "latitude": 35.70976,
+      "longitude": 107.64455,
+      "countryCode": "CN",
+      "admin1Code": "15",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "12358476",
+      "name": "河池市",
+      "sourceName": "Hechi",
+      "latitude": 24.69285,
+      "longitude": 108.08376,
+      "countryCode": "CN",
+      "admin1Code": "16",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "12324556",
+      "name": "石嘴山市",
+      "sourceName": "Shizuishan",
+      "latitude": 38.98082,
+      "longitude": 106.3892,
+      "countryCode": "CN",
+      "admin1Code": "21",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "13457912",
+      "name": "岳阳",
+      "sourceName": "Yueyang",
+      "latitude": 29.36778,
+      "longitude": 113.12019,
+      "countryCode": "CN",
+      "admin1Code": "11",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "8067345",
+      "name": "山南市",
+      "sourceName": "Lhoka",
+      "latitude": 29.24301,
+      "longitude": 91.77239,
+      "countryCode": "CN",
+      "admin1Code": "14",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "8054802",
+      "name": "希日塔拉",
+      "sourceName": "Xilinhot",
+      "latitude": 43.93889,
+      "longitude": 116.07021,
+      "countryCode": "CN",
+      "admin1Code": "20",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "7931312",
+      "name": "玛沁县",
+      "sourceName": "Maqin County",
+      "latitude": 34.47442,
+      "longitude": 100.24496,
+      "countryCode": "CN",
+      "admin1Code": "06",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2036581",
+      "name": "佳木斯",
+      "sourceName": "Jiamusi",
+      "latitude": 46.79711,
+      "longitude": 130.31118,
+      "countryCode": "CN",
+      "admin1Code": "08",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2036502",
+      "name": "吉林",
+      "sourceName": "Jilin",
+      "latitude": 43.84652,
+      "longitude": 126.5608,
+      "countryCode": "CN",
+      "admin1Code": "05",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2036389",
+      "name": "鶏西",
+      "sourceName": "Jixi",
+      "latitude": 45.29322,
+      "longitude": 130.96217,
+      "countryCode": "CN",
+      "admin1Code": "08",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2036109",
+      "name": "辽源",
+      "sourceName": "Longshan",
+      "latitude": 42.88545,
+      "longitude": 125.1367,
+      "countryCode": "CN",
+      "admin1Code": "05",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2035715",
+      "name": "牡丹江",
+      "sourceName": "Mudanjiang",
+      "latitude": 44.54804,
+      "longitude": 129.62594,
+      "countryCode": "CN",
+      "admin1Code": "08",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2035399",
+      "name": "松原",
+      "sourceName": "Songyuan",
+      "latitude": 45.12902,
+      "longitude": 124.82769,
+      "countryCode": "CN",
+      "admin1Code": "05",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2036662",
+      "name": "葫芦岛",
+      "sourceName": "Huludao",
+      "latitude": 40.75243,
+      "longitude": 120.83552,
+      "countryCode": "CN",
+      "admin1Code": "19",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2035265",
+      "name": "齊齊哈爾",
+      "sourceName": "Qiqihar",
+      "latitude": 47.33922,
+      "longitude": 123.96154,
+      "countryCode": "CN",
+      "admin1Code": "08",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2034937",
+      "name": "沈阳",
+      "sourceName": "Shenyang",
+      "latitude": 41.79222,
+      "longitude": 123.43278,
+      "countryCode": "CN",
+      "admin1Code": "19",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "2034786",
+      "name": "双鴨山市",
+      "sourceName": "Shuangyashan",
+      "latitude": 46.67686,
+      "longitude": 131.13273,
+      "countryCode": "CN",
+      "admin1Code": "08",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2034655",
+      "name": "綏化",
+      "sourceName": "Suihua",
+      "latitude": 46.64814,
+      "longitude": 126.96656,
+      "countryCode": "CN",
+      "admin1Code": "08",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2034414",
+      "name": "通化",
+      "sourceName": "Tonghua",
+      "latitude": 41.71972,
+      "longitude": 125.92639,
+      "countryCode": "CN",
+      "admin1Code": "05",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2034400",
+      "name": "巴彦塔拉",
+      "sourceName": "Tongliao",
+      "latitude": 43.6125,
+      "longitude": 122.26528,
+      "countryCode": "CN",
+      "admin1Code": "20",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2033467",
+      "name": "延吉",
+      "sourceName": "Yanji",
+      "latitude": 42.88825,
+      "longitude": 129.50241,
+      "countryCode": "CN",
+      "admin1Code": "05",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2035261",
+      "name": "七台河",
+      "sourceName": "Qitaihe",
+      "latitude": 45.768,
+      "longitude": 130.9953,
+      "countryCode": "CN",
+      "admin1Code": "08",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2033196",
+      "name": "张家口",
+      "sourceName": "Zhangjiakou",
+      "latitude": 40.78341,
+      "longitude": 114.87139,
+      "countryCode": "CN",
+      "admin1Code": "10",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2036892",
+      "name": "呼和浩特",
+      "sourceName": "Hohhot",
+      "latitude": 40.81056,
+      "longitude": 111.65222,
+      "countryCode": "CN",
+      "admin1Code": "20",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "2036986",
+      "name": "鶴崗",
+      "sourceName": "Hegang",
+      "latitude": 47.34727,
+      "longitude": 130.29033,
+      "countryCode": "CN",
+      "admin1Code": "08",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "7910932",
+      "name": "香格里拉",
+      "sourceName": "Shangri-La",
+      "latitude": 27.82511,
+      "longitude": 99.70779,
+      "countryCode": "CN",
+      "admin1Code": "29",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "7576887",
+      "name": "賀州",
+      "sourceName": "Hezhou",
+      "latitude": 24.40357,
+      "longitude": 111.56675,
+      "countryCode": "CN",
+      "admin1Code": "16",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "7064006",
+      "name": "铜官",
+      "sourceName": "Tongchuan",
+      "latitude": 34.8988,
+      "longitude": 108.95056,
+      "countryCode": "CN",
+      "admin1Code": "26",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "6986104",
+      "name": "中山",
+      "sourceName": "Zhongshan",
+      "latitude": 22.52306,
+      "longitude": 113.37912,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "6929460",
+      "name": "攀枝花",
+      "sourceName": "Panzhihua",
+      "latitude": 26.58509,
+      "longitude": 101.71276,
+      "countryCode": "CN",
+      "admin1Code": "32",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "6642286",
+      "name": "鄂州",
+      "sourceName": "E’zhou",
+      "latitude": 30.39607,
+      "longitude": 114.88655,
+      "countryCode": "CN",
+      "admin1Code": "12",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2036973",
+      "name": "黑河",
+      "sourceName": "Heihe",
+      "latitude": 50.24413,
+      "longitude": 127.49016,
+      "countryCode": "CN",
+      "admin1Code": "08",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2038584",
+      "name": "八道江",
+      "sourceName": "Baishan",
+      "latitude": 41.93853,
+      "longitude": 126.41965,
+      "countryCode": "CN",
+      "admin1Code": "05",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2038180",
+      "name": "長春",
+      "sourceName": "Changchun",
+      "latitude": 43.88,
+      "longitude": 125.32278,
+      "countryCode": "CN",
+      "admin1Code": "05",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "2038120",
+      "name": "朝阳市",
+      "sourceName": "Chaoyang",
+      "latitude": 41.57028,
+      "longitude": 120.45861,
+      "countryCode": "CN",
+      "admin1Code": "19",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2038067",
+      "name": "红山区",
+      "sourceName": "Chifeng",
+      "latitude": 42.26833,
+      "longitude": 118.96361,
+      "countryCode": "CN",
+      "admin1Code": "20",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2037860",
+      "name": "大庆",
+      "sourceName": "Daqing",
+      "latitude": 46.58333,
+      "longitude": 125.0,
+      "countryCode": "CN",
+      "admin1Code": "08",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2037355",
+      "name": "抚顺市",
+      "sourceName": "Fushun",
+      "latitude": 41.88669,
+      "longitude": 123.94363,
+      "countryCode": "CN",
+      "admin1Code": "19",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "2037013",
+      "name": "哈尔滨",
+      "sourceName": "Harbin",
+      "latitude": 45.75,
+      "longitude": 126.65,
+      "countryCode": "CN",
+      "admin1Code": "08",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "2038569",
+      "name": "白城",
+      "sourceName": "Baicheng",
+      "latitude": 45.61751,
+      "longitude": 122.83302,
+      "countryCode": "CN",
+      "admin1Code": "05",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1805680",
+      "name": "景徳鎮",
+      "sourceName": "Jingdezhen",
+      "latitude": 29.2947,
+      "longitude": 117.20789,
+      "countryCode": "CN",
+      "admin1Code": "03",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1805611",
+      "name": "荆门市",
+      "sourceName": "Jingmen",
+      "latitude": 31.03361,
+      "longitude": 112.20472,
+      "countryCode": "CN",
+      "admin1Code": "12",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1805540",
+      "name": "荆州市",
+      "sourceName": "Jingzhou",
+      "latitude": 30.35028,
+      "longitude": 112.19028,
+      "countryCode": "CN",
+      "admin1Code": "12",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1786217",
+      "name": "永州",
+      "sourceName": "Yongzhou",
+      "latitude": 26.42389,
+      "longitude": 111.61306,
+      "countryCode": "CN",
+      "admin1Code": "11",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1786577",
+      "name": "鷹潭",
+      "sourceName": "Yingtan",
+      "latitude": 28.23333,
+      "longitude": 117.0,
+      "countryCode": "CN",
+      "admin1Code": "03",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1786657",
+      "name": "銀川",
+      "sourceName": "Yinchuan",
+      "latitude": 38.46806,
+      "longitude": 106.27306,
+      "countryCode": "CN",
+      "admin1Code": "21",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1786746",
+      "name": "宜春",
+      "sourceName": "Yichun",
+      "latitude": 27.83333,
+      "longitude": 114.4,
+      "countryCode": "CN",
+      "admin1Code": "03",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1786764",
+      "name": "宜昌",
+      "sourceName": "Yichang",
+      "latitude": 30.71444,
+      "longitude": 111.28472,
+      "countryCode": "CN",
+      "admin1Code": "12",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1787351",
+      "name": "阳泉",
+      "sourceName": "Yangquan",
+      "latitude": 37.8575,
+      "longitude": 113.56333,
+      "countryCode": "CN",
+      "admin1Code": "24",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1787746",
+      "name": "塩城市",
+      "sourceName": "Yancheng",
+      "latitude": 33.3575,
+      "longitude": 120.1573,
+      "countryCode": "CN",
+      "admin1Code": "04",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1787765",
+      "name": "延安",
+      "sourceName": "Yan’an",
+      "latitude": 36.59889,
+      "longitude": 109.49167,
+      "countryCode": "CN",
+      "admin1Code": "26",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1787816",
+      "name": "雅安市",
+      "sourceName": "Ya'an",
+      "latitude": 29.98521,
+      "longitude": 102.999,
+      "countryCode": "CN",
+      "admin1Code": "32",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1787858",
+      "name": "上饒",
+      "sourceName": "Shangrao",
+      "latitude": 28.45179,
+      "longitude": 117.94287,
+      "countryCode": "CN",
+      "admin1Code": "03",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1788046",
+      "name": "将官池",
+      "sourceName": "Xuchang",
+      "latitude": 34.03189,
+      "longitude": 113.86299,
+      "countryCode": "CN",
+      "admin1Code": "09",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1788081",
+      "name": "宣城市",
+      "sourceName": "Xuancheng",
+      "latitude": 30.9525,
+      "longitude": 118.75528,
+      "countryCode": "CN",
+      "admin1Code": "01",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1788450",
+      "name": "忻州",
+      "sourceName": "Xinzhou",
+      "latitude": 38.40917,
+      "longitude": 112.73333,
+      "countryCode": "CN",
+      "admin1Code": "24",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1788508",
+      "name": "新余",
+      "sourceName": "Xinyu",
+      "latitude": 27.80429,
+      "longitude": 114.93335,
+      "countryCode": "CN",
+      "admin1Code": "03",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1788572",
+      "name": "南干道",
+      "sourceName": "Xinxiang",
+      "latitude": 35.19033,
+      "longitude": 113.80151,
+      "countryCode": "CN",
+      "admin1Code": "09",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1788852",
+      "name": "西宁",
+      "sourceName": "Xining",
+      "latitude": 36.62554,
+      "longitude": 101.75739,
+      "countryCode": "CN",
+      "admin1Code": "06",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1788927",
+      "name": "台市",
+      "sourceName": "Xingtai",
+      "latitude": 37.06217,
+      "longitude": 114.49272,
+      "countryCode": "CN",
+      "admin1Code": "10",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1791247",
+      "name": "武汉",
+      "sourceName": "Wuhan",
+      "latitude": 30.58333,
+      "longitude": 114.26667,
+      "countryCode": "CN",
+      "admin1Code": "12",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1791236",
+      "name": "芜湖",
+      "sourceName": "Wuhu",
+      "latitude": 31.35259,
+      "longitude": 118.42947,
+      "countryCode": "CN",
+      "admin1Code": "01",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1790923",
+      "name": "无锡",
+      "sourceName": "Wuxi",
+      "latitude": 31.56887,
+      "longitude": 120.28857,
+      "countryCode": "CN",
+      "admin1Code": "04",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1790842",
+      "name": "吴忠",
+      "sourceName": "Wuzhong",
+      "latitude": 37.9867,
+      "longitude": 106.201,
+      "countryCode": "CN",
+      "admin1Code": "21",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1790840",
+      "name": "梧州",
+      "sourceName": "Wuzhou",
+      "latitude": 23.48054,
+      "longitude": 111.28848,
+      "countryCode": "CN",
+      "admin1Code": "16",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1790645",
+      "name": "厦门",
+      "sourceName": "Xiamen",
+      "latitude": 24.47979,
+      "longitude": 118.08187,
+      "countryCode": "CN",
+      "admin1Code": "07",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1786112",
+      "name": "河源",
+      "sourceName": "Heyuan",
+      "latitude": 23.73333,
+      "longitude": 114.68333,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1790630",
+      "name": "西安",
+      "sourceName": "Xi’an",
+      "latitude": 34.25833,
+      "longitude": 108.92861,
+      "countryCode": "CN",
+      "admin1Code": "26",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1790492",
+      "name": "湘潭",
+      "sourceName": "Xiangtan",
+      "latitude": 27.85,
+      "longitude": 112.9,
+      "countryCode": "CN",
+      "admin1Code": "11",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1790437",
+      "name": "珠海",
+      "sourceName": "Zhuhai",
+      "latitude": 22.27694,
+      "longitude": 113.56778,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1790396",
+      "name": "咸宁市",
+      "sourceName": "Xianning",
+      "latitude": 29.84347,
+      "longitude": 114.32201,
+      "countryCode": "CN",
+      "admin1Code": "12",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1790254",
+      "name": "孝感",
+      "sourceName": "Xiaogan",
+      "latitude": 30.92689,
+      "longitude": 113.92221,
+      "countryCode": "CN",
+      "admin1Code": "12",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1789647",
+      "name": "西昌",
+      "sourceName": "Xichang",
+      "latitude": 27.89642,
+      "longitude": 102.26341,
+      "countryCode": "CN",
+      "admin1Code": "32",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1789065",
+      "name": "安康",
+      "sourceName": "Ankang",
+      "latitude": 32.68,
+      "longitude": 109.01722,
+      "countryCode": "CN",
+      "admin1Code": "26",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1790587",
+      "name": "樊城",
+      "sourceName": "Xiangyang",
+      "latitude": 32.0422,
+      "longitude": 112.14479,
+      "countryCode": "CN",
+      "admin1Code": "12",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1785777",
+      "name": "楡林",
+      "sourceName": "Yulinshi",
+      "latitude": 38.29181,
+      "longitude": 109.73753,
+      "countryCode": "CN",
+      "admin1Code": "26",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1785738",
+      "name": "安邑",
+      "sourceName": "Yuncheng",
+      "latitude": 35.02306,
+      "longitude": 110.99278,
+      "countryCode": "CN",
+      "admin1Code": "24",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1785725",
+      "name": "云浮",
+      "sourceName": "Yunfu",
+      "latitude": 22.92787,
+      "longitude": 112.03809,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1529167",
+      "name": "塔城",
+      "sourceName": "Tacheng",
+      "latitude": 46.74535,
+      "longitude": 82.95847,
+      "countryCode": "CN",
+      "admin1Code": "13",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1529114",
+      "name": "吐鲁番",
+      "sourceName": "Turpan",
+      "latitude": 42.94769,
+      "longitude": 89.17886,
+      "countryCode": "CN",
+      "admin1Code": "13",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1529102",
+      "name": "乌鲁木齐",
+      "sourceName": "Ürümqi",
+      "latitude": 43.80096,
+      "longitude": 87.60046,
+      "countryCode": "CN",
+      "admin1Code": "13",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1281743",
+      "name": "阿图什",
+      "sourceName": "Artux",
+      "latitude": 39.70842,
+      "longitude": 76.17971,
+      "countryCode": "CN",
+      "admin1Code": "13",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1281673",
+      "name": "保山",
+      "sourceName": "Baoshan",
+      "latitude": 25.11626,
+      "longitude": 99.16366,
+      "countryCode": "CN",
+      "admin1Code": "29",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1281105",
+      "name": "玉树市",
+      "sourceName": "Yushu",
+      "latitude": 33.00118,
+      "longitude": 97.00893,
+      "countryCode": "CN",
+      "admin1Code": "06",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1529376",
+      "name": "库尔勒",
+      "sourceName": "Korla",
+      "latitude": 41.76055,
+      "longitude": 86.15231,
+      "countryCode": "CN",
+      "admin1Code": "13",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1280957",
+      "name": "嘉峪关市",
+      "sourceName": "Jiayuguan",
+      "latitude": 39.81121,
+      "longitude": 98.28618,
+      "countryCode": "CN",
+      "admin1Code": "15",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1280737",
+      "name": "拉萨",
+      "sourceName": "Lhasa",
+      "latitude": 29.65,
+      "longitude": 91.1,
+      "countryCode": "CN",
+      "admin1Code": "14",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1280517",
+      "name": "地区",
+      "sourceName": "Nagqu",
+      "latitude": 31.47678,
+      "longitude": 92.05729,
+      "countryCode": "CN",
+      "admin1Code": "14",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1280281",
+      "name": "昌都",
+      "sourceName": "Qamdo",
+      "latitude": 31.1304,
+      "longitude": 97.17982,
+      "countryCode": "CN",
+      "admin1Code": "14",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1280003",
+      "name": "噶尔县",
+      "sourceName": "Gar",
+      "latitude": 32.50124,
+      "longitude": 80.09758,
+      "countryCode": "CN",
+      "admin1Code": "14",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1279945",
+      "name": "肃州",
+      "sourceName": "Jiuquan",
+      "latitude": 39.74318,
+      "longitude": 98.51736,
+      "countryCode": "CN",
+      "admin1Code": "15",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1279715",
+      "name": "日喀则",
+      "sourceName": "Rikaze",
+      "latitude": 29.25,
+      "longitude": 88.88333,
+      "countryCode": "CN",
+      "admin1Code": "14",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1280849",
+      "name": "喀什",
+      "sourceName": "Kashgar",
+      "latitude": 39.46718,
+      "longitude": 75.98675,
+      "countryCode": "CN",
+      "admin1Code": "13",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1791249",
+      "name": "乌海",
+      "sourceName": "Wuhai",
+      "latitude": 39.68442,
+      "longitude": 106.81583,
+      "countryCode": "CN",
+      "admin1Code": "20",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1529401",
+      "name": "克拉玛依",
+      "sourceName": "Karamay",
+      "latitude": 45.58473,
+      "longitude": 84.88724,
+      "countryCode": "CN",
+      "admin1Code": "13",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1529569",
+      "name": "延安北路",
+      "sourceName": "Changji",
+      "latitude": 44.00782,
+      "longitude": 87.30461,
+      "countryCode": "CN",
+      "admin1Code": "13",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1785294",
+      "name": "安阳市",
+      "sourceName": "Anyang",
+      "latitude": 36.096,
+      "longitude": 114.38278,
+      "countryCode": "CN",
+      "admin1Code": "09",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1785036",
+      "name": "张掖",
+      "sourceName": "Zhangye",
+      "latitude": 38.93417,
+      "longitude": 100.45167,
+      "countryCode": "CN",
+      "admin1Code": "15",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1785018",
+      "name": "州市",
+      "sourceName": "Zhangzhou",
+      "latitude": 24.51333,
+      "longitude": 117.65556,
+      "countryCode": "CN",
+      "admin1Code": "07",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1784990",
+      "name": "湛江",
+      "sourceName": "Zhanjiang",
+      "latitude": 21.23391,
+      "longitude": 110.38749,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1784853",
+      "name": "肇庆",
+      "sourceName": "Zhaoqing",
+      "latitude": 23.04893,
+      "longitude": 112.46091,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1784658",
+      "name": "郑州",
+      "sourceName": "Zhengzhou",
+      "latitude": 34.75778,
+      "longitude": 113.64861,
+      "countryCode": "CN",
+      "admin1Code": "09",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1529435",
+      "name": "伊宁",
+      "sourceName": "Ghulja",
+      "latitude": 43.91515,
+      "longitude": 81.32151,
+      "countryCode": "CN",
+      "admin1Code": "13",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1784642",
+      "name": "鎮江",
+      "sourceName": "Zhenjiang",
+      "latitude": 32.21086,
+      "longitude": 119.45508,
+      "countryCode": "CN",
+      "admin1Code": "04",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1784130",
+      "name": "周口",
+      "sourceName": "Zhoukou",
+      "latitude": 33.63333,
+      "longitude": 114.63333,
+      "countryCode": "CN",
+      "admin1Code": "09",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1783873",
+      "name": "驻马店",
+      "sourceName": "Zhumadian",
+      "latitude": 32.98385,
+      "longitude": 114.02586,
+      "countryCode": "CN",
+      "admin1Code": "09",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1783763",
+      "name": "株洲",
+      "sourceName": "Zhuzhou",
+      "latitude": 27.83333,
+      "longitude": 113.15,
+      "countryCode": "CN",
+      "admin1Code": "11",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1783683",
+      "name": "资阳市",
+      "sourceName": "Ziyang",
+      "latitude": 30.12108,
+      "longitude": 104.64811,
+      "countryCode": "CN",
+      "admin1Code": "32",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1783621",
+      "name": "遵义",
+      "sourceName": "Zunyi",
+      "latitude": 27.68667,
+      "longitude": 106.90722,
+      "countryCode": "CN",
+      "admin1Code": "18",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1529660",
+      "name": "阿克苏",
+      "sourceName": "Aqsu",
+      "latitude": 41.18418,
+      "longitude": 80.27921,
+      "countryCode": "CN",
+      "admin1Code": "13",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1784285",
+      "name": "中卫",
+      "sourceName": "Zhongwei",
+      "latitude": 37.51129,
+      "longitude": 105.19067,
+      "countryCode": "CN",
+      "admin1Code": "21",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1791636",
+      "name": "渭南",
+      "sourceName": "Weinan",
+      "latitude": 34.50355,
+      "longitude": 109.50891,
+      "countryCode": "CN",
+      "admin1Code": "26",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1791673",
+      "name": "威海",
+      "sourceName": "Weihai",
+      "latitude": 37.50914,
+      "longitude": 122.11356,
+      "countryCode": "CN",
+      "admin1Code": "25",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1791779",
+      "name": "万城",
+      "sourceName": "Wanning",
+      "latitude": 18.79931,
+      "longitude": 110.3841,
+      "countryCode": "CN",
+      "admin1Code": "31",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1802171",
+      "name": "康定市",
+      "sourceName": "Kangding",
+      "latitude": 30.00222,
+      "longitude": 101.9569,
+      "countryCode": "CN",
+      "admin1Code": "32",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1801934",
+      "name": "河市",
+      "sourceName": "Luohe",
+      "latitude": 33.57424,
+      "longitude": 114.03261,
+      "countryCode": "CN",
+      "admin1Code": "09",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1801792",
+      "name": "河南府",
+      "sourceName": "Luoyang",
+      "latitude": 34.67345,
+      "longitude": 112.43684,
+      "countryCode": "CN",
+      "admin1Code": "09",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1801640",
+      "name": "泸州",
+      "sourceName": "Luzhou",
+      "latitude": 28.8903,
+      "longitude": 105.42575,
+      "countryCode": "CN",
+      "admin1Code": "32",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1801620",
+      "name": "马鞍山",
+      "sourceName": "Ma’anshan",
+      "latitude": 31.68579,
+      "longitude": 118.51008,
+      "countryCode": "CN",
+      "admin1Code": "01",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1801180",
+      "name": "茂名",
+      "sourceName": "Maoming",
+      "latitude": 21.66625,
+      "longitude": 110.91364,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1802206",
+      "name": "六安",
+      "sourceName": "Lu’an",
+      "latitude": 31.73561,
+      "longitude": 116.51688,
+      "countryCode": "CN",
+      "admin1Code": "01",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1800818",
+      "name": "眉山",
+      "sourceName": "Meishan",
+      "latitude": 30.04392,
+      "longitude": 103.83696,
+      "countryCode": "CN",
+      "admin1Code": "32",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1800163",
+      "name": "南昌",
+      "sourceName": "Nanchang",
+      "latitude": 28.68396,
+      "longitude": 115.85306,
+      "countryCode": "CN",
+      "admin1Code": "03",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1800146",
+      "name": "南充",
+      "sourceName": "Nanchong",
+      "latitude": 30.79508,
+      "longitude": 106.08473,
+      "countryCode": "CN",
+      "admin1Code": "32",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1799962",
+      "name": "南京",
+      "sourceName": "Nanjing",
+      "latitude": 32.06167,
+      "longitude": 118.77778,
+      "countryCode": "CN",
+      "admin1Code": "04",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1799869",
+      "name": "南宁",
+      "sourceName": "Nanning",
+      "latitude": 22.81667,
+      "longitude": 108.31667,
+      "countryCode": "CN",
+      "admin1Code": "16",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1799846",
+      "name": "南平",
+      "sourceName": "Nanping",
+      "latitude": 26.645,
+      "longitude": 118.17361,
+      "countryCode": "CN",
+      "admin1Code": "07",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1799722",
+      "name": "南通",
+      "sourceName": "Nantong",
+      "latitude": 32.03028,
+      "longitude": 120.87472,
+      "countryCode": "CN",
+      "admin1Code": "04",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1800779",
+      "name": "梅州",
+      "sourceName": "Meizhou",
+      "latitude": 24.28859,
+      "longitude": 116.11768,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1799629",
+      "name": "南阳",
+      "sourceName": "Nanyang",
+      "latitude": 33.00524,
+      "longitude": 112.54659,
+      "countryCode": "CN",
+      "admin1Code": "09",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1802238",
+      "name": "娄底市",
+      "sourceName": "Loudi",
+      "latitude": 27.73444,
+      "longitude": 111.99444,
+      "countryCode": "CN",
+      "admin1Code": "11",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1803245",
+      "name": "丽水",
+      "sourceName": "Lishui",
+      "latitude": 28.46042,
+      "longitude": 119.91029,
+      "countryCode": "CN",
+      "admin1Code": "02",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1805528",
+      "name": "金华",
+      "sourceName": "Jinhua",
+      "latitude": 29.10678,
+      "longitude": 119.64421,
+      "countryCode": "CN",
+      "admin1Code": "02",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1805270",
+      "name": "乾州",
+      "sourceName": "Jishou",
+      "latitude": 28.31925,
+      "longitude": 109.73346,
+      "countryCode": "CN",
+      "admin1Code": "11",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1805179",
+      "name": "九江",
+      "sourceName": "Jiujiang",
+      "latitude": 29.70475,
+      "longitude": 116.00206,
+      "countryCode": "CN",
+      "admin1Code": "03",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1805012",
+      "name": "双桥",
+      "sourceName": "Jiyuan",
+      "latitude": 35.08912,
+      "longitude": 112.58815,
+      "countryCode": "CN",
+      "admin1Code": "09",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1804866",
+      "name": "凯里",
+      "sourceName": "Kaili",
+      "latitude": 26.58583,
+      "longitude": 107.97972,
+      "countryCode": "CN",
+      "admin1Code": "18",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1804651",
+      "name": "昆明",
+      "sourceName": "Kunming",
+      "latitude": 25.03889,
+      "longitude": 102.71833,
+      "countryCode": "CN",
+      "admin1Code": "29",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1802276",
+      "name": "竜岩",
+      "sourceName": "Longyan",
+      "latitude": 25.07485,
+      "longitude": 117.01775,
+      "countryCode": "CN",
+      "admin1Code": "07",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1804609",
+      "name": "來賓",
+      "sourceName": "Laibin",
+      "latitude": 23.74743,
+      "longitude": 109.22222,
+      "countryCode": "CN",
+      "admin1Code": "16",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1804430",
+      "name": "兰州",
+      "sourceName": "Lanzhou",
+      "latitude": 36.05701,
+      "longitude": 103.83987,
+      "countryCode": "CN",
+      "admin1Code": "15",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1803936",
+      "name": "武威",
+      "sourceName": "Wuwei",
+      "latitude": 37.92672,
+      "longitude": 102.63202,
+      "countryCode": "CN",
+      "admin1Code": "15",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1803834",
+      "name": "聊城",
+      "sourceName": "Liaocheng",
+      "latitude": 36.45064,
+      "longitude": 116.00247,
+      "countryCode": "CN",
+      "admin1Code": "25",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1803590",
+      "name": "临沧市",
+      "sourceName": "Lincang",
+      "latitude": 23.87972,
+      "longitude": 100.09455,
+      "countryCode": "CN",
+      "admin1Code": "29",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1803318",
+      "name": "临沂",
+      "sourceName": "Linyi",
+      "latitude": 35.06306,
+      "longitude": 118.34278,
+      "countryCode": "CN",
+      "admin1Code": "25",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1803300",
+      "name": "柳州",
+      "sourceName": "Liuzhou",
+      "latitude": 24.32405,
+      "longitude": 109.40698,
+      "countryCode": "CN",
+      "admin1Code": "16",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1804540",
+      "name": "廊坊",
+      "sourceName": "Langfang",
+      "latitude": 39.52079,
+      "longitude": 116.71471,
+      "countryCode": "CN",
+      "admin1Code": "10",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "13527316",
+      "name": "望德堂区",
+      "sourceName": "São Lázaro",
+      "latitude": 22.1999,
+      "longitude": 113.54895,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1799397",
+      "name": "宁波",
+      "sourceName": "Ningbo",
+      "latitude": 29.87819,
+      "longitude": 121.54945,
+      "countryCode": "CN",
+      "admin1Code": "02",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1798827",
+      "name": "平頂山",
+      "sourceName": "Pingdingshan",
+      "latitude": 33.73091,
+      "longitude": 113.31554,
+      "countryCode": "CN",
+      "admin1Code": "09",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1795928",
+      "name": "汕尾",
+      "sourceName": "Shanwei",
+      "latitude": 22.78199,
+      "longitude": 115.3475,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1795874",
+      "name": "韶关",
+      "sourceName": "Shaoguan",
+      "latitude": 24.8,
+      "longitude": 113.58333,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1795565",
+      "name": "宝安",
+      "sourceName": "Shenzhen",
+      "latitude": 22.54554,
+      "longitude": 114.0683,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1795270",
+      "name": "石家庄",
+      "sourceName": "Shijiazhuang",
+      "latitude": 38.04139,
+      "longitude": 114.47861,
+      "countryCode": "CN",
+      "admin1Code": "10",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1794903",
+      "name": "十堰",
+      "sourceName": "Shiyan",
+      "latitude": 32.6475,
+      "longitude": 110.77806,
+      "countryCode": "CN",
+      "admin1Code": "12",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1794328",
+      "name": "朔州",
+      "sourceName": "Shuozhou",
+      "latitude": 39.31583,
+      "longitude": 112.4225,
+      "countryCode": "CN",
+      "admin1Code": "24",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1795940",
+      "name": "汕头",
+      "sourceName": "Shantou",
+      "latitude": 23.35489,
+      "longitude": 116.67876,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1793879",
+      "name": "随州市",
+      "sourceName": "Suizhou",
+      "latitude": 31.71111,
+      "longitude": 113.36306,
+      "countryCode": "CN",
+      "admin1Code": "12",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1793743",
+      "name": "宿州市",
+      "sourceName": "Suzhou",
+      "latitude": 33.63611,
+      "longitude": 116.97889,
+      "countryCode": "CN",
+      "admin1Code": "01",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1793724",
+      "name": "泰安市",
+      "sourceName": "Tai’an",
+      "latitude": 36.18528,
+      "longitude": 117.12,
+      "countryCode": "CN",
+      "admin1Code": "25",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1793511",
+      "name": "太原",
+      "sourceName": "Taiyuan",
+      "latitude": 37.86944,
+      "longitude": 112.56028,
+      "countryCode": "CN",
+      "admin1Code": "24",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1793346",
+      "name": "唐山",
+      "sourceName": "Tangshan",
+      "latitude": 39.64381,
+      "longitude": 118.18319,
+      "countryCode": "CN",
+      "admin1Code": "10",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1792947",
+      "name": "天津",
+      "sourceName": "Tianjin",
+      "latitude": 39.14222,
+      "longitude": 117.17667,
+      "countryCode": "CN",
+      "admin1Code": "28",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1792592",
+      "name": "铜仁市",
+      "sourceName": "Tongren",
+      "latitude": 27.71722,
+      "longitude": 109.18528,
+      "countryCode": "CN",
+      "admin1Code": "18",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1793771",
+      "name": "宿迁市",
+      "sourceName": "Suqian",
+      "latitude": 33.94917,
+      "longitude": 118.29583,
+      "countryCode": "CN",
+      "admin1Code": "04",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1799194",
+      "name": "广安市",
+      "sourceName": "Guang’an",
+      "latitude": 30.47413,
+      "longitude": 106.63696,
+      "countryCode": "CN",
+      "admin1Code": "32",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1796068",
+      "name": "商洛市",
+      "sourceName": "Shangluo",
+      "latitude": 33.86667,
+      "longitude": 109.93056,
+      "countryCode": "CN",
+      "admin1Code": "26",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1796236",
+      "name": "上海",
+      "sourceName": "Shanghai",
+      "latitude": 31.22222,
+      "longitude": 121.45806,
+      "countryCode": "CN",
+      "admin1Code": "23",
+      "featureCode": "PPLA"
+    },
+    {
+      "id": "1798760",
+      "name": "平凉",
+      "sourceName": "Pingliang",
+      "latitude": 35.53917,
+      "longitude": 106.68611,
+      "countryCode": "CN",
+      "admin1Code": "15",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1798654",
+      "name": "萍乡",
+      "sourceName": "Pingxiang",
+      "latitude": 27.61672,
+      "longitude": 113.85353,
+      "countryCode": "CN",
+      "admin1Code": "03",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1798449",
+      "name": "田市",
+      "sourceName": "Putian",
+      "latitude": 25.43944,
+      "longitude": 119.01028,
+      "countryCode": "CN",
+      "admin1Code": "07",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1798403",
+      "name": "共和县",
+      "sourceName": "Qabqa",
+      "latitude": 36.28139,
+      "longitude": 100.61306,
+      "countryCode": "CN",
+      "admin1Code": "06",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1797945",
+      "name": "清远",
+      "sourceName": "Qingyuan",
+      "latitude": 23.7,
+      "longitude": 113.03333,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1797929",
+      "name": "青岛",
+      "sourceName": "Qingdao",
+      "latitude": 36.06488,
+      "longitude": 120.38042,
+      "countryCode": "CN",
+      "admin1Code": "25",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1796134",
+      "name": "商丘",
+      "sourceName": "Shangqiu",
+      "latitude": 34.4143,
+      "longitude": 115.65613,
+      "countryCode": "CN",
+      "admin1Code": "09",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1797595",
+      "name": "秦皇岛",
+      "sourceName": "Qinhuangdao",
+      "latitude": 39.94104,
+      "longitude": 119.58936,
+      "countryCode": "CN",
+      "admin1Code": "10",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1797353",
+      "name": "泉州",
+      "sourceName": "Quanzhou",
+      "latitude": 24.91389,
+      "longitude": 118.58583,
+      "countryCode": "CN",
+      "admin1Code": "07",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1797121",
+      "name": "掲陽市",
+      "sourceName": "Jieyang",
+      "latitude": 23.5418,
+      "longitude": 116.36581,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1797091",
+      "name": "同仁",
+      "sourceName": "Tongren",
+      "latitude": 35.51483,
+      "longitude": 102.016,
+      "countryCode": "CN",
+      "admin1Code": "06",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1796669",
+      "name": "三門峡市",
+      "sourceName": "Sanmenxia",
+      "latitude": 34.78081,
+      "longitude": 111.19287,
+      "countryCode": "CN",
+      "admin1Code": "09",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1796663",
+      "name": "三明",
+      "sourceName": "Sanming",
+      "latitude": 26.24861,
+      "longitude": 117.61861,
+      "countryCode": "CN",
+      "admin1Code": "07",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1796556",
+      "name": "三亚",
+      "sourceName": "Sanya",
+      "latitude": 18.25435,
+      "longitude": 109.50947,
+      "countryCode": "CN",
+      "admin1Code": "31",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "1797551",
+      "name": "欽州",
+      "sourceName": "Qinzhou",
+      "latitude": 21.98247,
+      "longitude": 108.65061,
+      "countryCode": "CN",
+      "admin1Code": "16",
+      "featureCode": "PPLA2"
+    },
+    {
+      "id": "13527318",
+      "name": "風順堂區",
+      "sourceName": "São Lourenço",
+      "latitude": 22.18851,
+      "longitude": 113.53488,
+      "countryCode": "CN",
+      "admin1Code": "30",
+      "featureCode": "PPLA2"
+    }
+  ]
+}

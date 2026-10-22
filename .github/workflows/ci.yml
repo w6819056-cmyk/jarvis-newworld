@@ -13,6 +13,25 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run windows:test
+      - run: npm run web:build
+      - run: npm run windows:models
+      - run: npm run windows:dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jarvis-windows-x64
+          path: release/windows/*-Setup.exe
   verify:
     runs-on: macos-14
     timeout-minutes: 30

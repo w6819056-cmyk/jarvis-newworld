@@ -36,7 +36,7 @@
 ## Task 1: Verify Rainform Integration and City-Catalog Rights
 
 **Files:**
-- Read: `C:\Users\Kevin\Rainform\LICENSE`, `NOTICE.md`, `docs/INTEGRATION.md`, `package.json`, and only production-required source/assets.
+- Read: the local Rainform checkout's `LICENSE`, `NOTICE.md`, `docs/INTEGRATION.md`, `package.json`, and only production-required source/assets.
 - Create: `modules/rainform/LICENSE`, `modules/rainform/NOTICE.md`, `modules/rainform/CITY-CATALOG-NOTICE.md`, `modules/rainform/city-catalog.json`.
 - Test: `tests/windows-rainform-packaging.test.ts`.
 
@@ -70,7 +70,7 @@
 - [ ] Add two settings inputs and populate/save them through the existing settings action; show these fields with the map/weather configuration group and avoid writing credentials to logs.
 - [ ] Implement a fetch-injected QWeather client requiring an HTTPS host, setting the API key only as the upstream authentication header, using 8-second timeouts, and limiting error bodies.
 - [ ] Implement city lookup, current weather and precipitation extraction, and next-24-hour forecast normalization. Reject malformed API envelopes and unsupported precipitation values.
-- [ ] Implement a one-time, no-log import of `QWEATHER_API_HOST` and `QWEATHER_API_KEY` from `C:\Users\Kevin\Rainform\.env` only when Jarvis settings lack those values; never copy or bundle the file.
+- [ ] Implement a one-time, no-log import of `QWEATHER_API_HOST` and `QWEATHER_API_KEY` from the local Rainform checkout's `.env` only when Jarvis settings lack those values; never copy or bundle the file.
 - [ ] Add tests for auth header isolation, HTTPS/host validation, endpoint construction, timeout, invalid JSON, provider error codes, precipitation units, and settings bounds.
 - [ ] Run `npm run windows:test -- --test-name-pattern="QWeather|settings accepts"`.
 
@@ -113,7 +113,7 @@
 - [ ] Keep current observation text/precipitation separate from the forecast curve and show update time, unit, loading, and failure states in Rainform's UI.
 - [ ] Return a completion result only after the city change and forecast refresh succeed; retain the last valid scene on failure.
 - [ ] Test host-triggered city switching, request bridge usage, no direct renderer secret, 25-point series, malformed command rejection, and forecast failure retaining the current scene.
-- [ ] Run `npm run windows:test -- --test-name-pattern="Rainform renderer"` and the Rainform source `npm run check` in `C:\Users\Kevin\Rainform` before copying any later source changes back.
+- [ ] Run `npm run windows:test -- --test-name-pattern="Rainform renderer"` and the Rainform source `npm run check` in the local Rainform checkout before copying any later source changes back.
 
 ## Task 7: Add Jarvis Local Tools and Orchestration
 

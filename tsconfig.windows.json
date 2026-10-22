@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "types": ["node"], "esModuleInterop": true },
+  "include": ["electron/**/*.ts", "modules/rainform/*.ts", "src/windows-*.ts", "src/vite-env.d.ts", "scripts/*-windows.ts", "tests/windows-*.ts"]
+}

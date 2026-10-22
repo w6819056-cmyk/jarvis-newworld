@@ -196,3 +196,10 @@ Jarvis × Codex 使用 [GNU General Public License v3.0](LICENSE) 开源。
 
 Jarvis 会识别新版 Codex/ChatGPT 桌面 CLI 路径，并在连接语音前检查 Voice v3
 兼容性。启动应用不会自动启用开机自启。详见[运行时说明](docs/CODEX_RUNTIME.zh-CN.md)。
+## Windows 11 适配版
+
+Windows 独立入口使用本地中文唤醒/识别、Codex 文字任务和 Windows 中文播报。安装、运行、权限交互及已知限制见 [Windows 使用说明](docs/WINDOWS.md)。原 macOS 构建流程保留。
+
+Windows 版将全息地图作为 Jarvis 内部模块统一打包。地图界面运行在 Jarvis 主进程创建和管理的独立窗口中，通过专用 preload 和受限 IPC 接收附近搜索、路线规划指令；它不是单独安装或运行的软件，路线也不会交给外部地图客户端。使用前在 Jarvis 设置中填写高德地图 JS API Key 和安全密钥，并在高德控制台限制 Key 的使用范围。支持“帮我看看附近有什么美食”“附近咖啡馆”和“导航到郑州东站”等语音或输入框指令；当前位置不可用时会明确提示，不使用固定坐标代替定位。
+
+Windows 版也将 Rainform / 数据成雨作为 Jarvis 内部雨幕可视化模块统一打包。设置中填写和风天气 API Host 与 API Key 后，可说“现在离我们最近的哪个城市在下雨”或“郑州现在的雨有多大”；前者按设备定位查询 GeoNames 城市目录，后者直接定位指定城市。可视化显示当前实况与未来 24 小时逐时预报。Rainform 派生代码依据 PolyForm Noncommercial License 1.0.0，仅限非商业用途；城市目录依据 CC BY 4.0，署名和许可证随包提供。

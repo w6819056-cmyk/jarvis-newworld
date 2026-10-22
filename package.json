@@ -1,24 +1,39 @@
 {
   "name": "jarvis-codex",
-  "version": "0.2.0",
+  "version": "0.3.31",
   "private": true,
+  "description": "Jarvis Windows local voice assistant with Codex app-server",
+  "license": "GPL-3.0-only",
   "type": "module",
+  "main": "dist-electron/main.cjs",
   "scripts": {
-    "wake:build": "zsh scripts/build-wake-helper.sh",
-    "predev": "npm run wake:build",
-    "dev": "tauri dev",
-    "prebuild": "npm run wake:build",
-    "build": "tauri build",
-    "web:dev": "vite",
-    "web:build": "tsc && vite build",
-    "test": "node --test tests/*.test.mjs",
-    "check": "npm run wake:build && npm test && npm run web:build && cargo test --manifest-path src-tauri/Cargo.toml --lib && cargo fmt --manifest-path src-tauri/Cargo.toml --check && cargo clippy --manifest-path src-tauri/Cargo.toml --all-targets -- -D warnings"
+    "windows:test": "tsx --test tests/windows-*.test.ts",
+    "windows:build": "tsc -p tsconfig.windows.json && tsc -p tsconfig.holo-map.json && vite build --config vite.windows.config.ts && node scripts/build-windows.mjs",
+    "windows:dist": "npm run windows:build && electron-builder --win --config electron-builder.yml",
+    "windows:model": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/download-memory-model.ps1"
   },
   "dependencies": {
-    "@tauri-apps/api": "^2.11.1"
+    "@amap/amap-jsapi-loader": "1.0.1",
+    "@huggingface/transformers": "3.7.2",
+    "@mediapipe/tasks-vision": "1.1.1",
+    "@tauri-apps/api": "^2.11.1",
+    "@types/leaflet": "^1.9.20",
+    "@types/ws": "^8.18.2",
+    "leaflet": "^1.9.4",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "sherpa-onnx-node": "^1.13.8",
+    "three": "0.186.1",
+    "ws": "^8.22.0"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^2.11.4",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@types/three": "0.186.0",
+    "electron": "^44.7.2",
+    "electron-builder": "^26.15.3",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.23.15",
     "typescript": "^7.0.2",
     "vite": "^8.1.5"
   },

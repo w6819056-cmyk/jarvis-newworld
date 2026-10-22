@@ -1,0 +1,5 @@
+Czkawka CLI 12.0.2
+Copyright (c) 2020-2026 Rafał Mikrut
+Source: https://github.com/qarmin/czkawka
+Windows binary SHA-256: EB7C2009D2DD49CF5202ACBD65370CAECE0A3F819B9515E727CEDB1EC088ED1A
+This distribution includes the Czkawka CLI only. It does not include the Czkawka GUI or Krokiet application.
