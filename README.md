@@ -1,23 +1,23 @@
 # Jarvis New World
 
-Windows desktop voice assistant built around Codex. Jarvis stays quietly in the background, wakes on “嗨 Jarvis” or “Hi Jarvis”, and gives the user a visual, local-first control surface for voice, text, tools, maps, weather, music, and desktop tasks.
+一个面向 Windows 的桌面语音管家。Jarvis 在后台等待唤醒，听到“嗨 Jarvis”或“Hi Jarvis”后，显示全息头盔界面，并把语音、文字、地图、天气、音乐和电脑操作分发给对应模块。
 
-This repository is the Windows-focused continuation of the original Jarvis interface. It is an Electron application with a TypeScript renderer and a protected main-process runtime. The goal is a practical desktop assistant that can understand a natural request and route it to the right local module.
+本仓库是原 Jarvis 界面的 Windows 方向继续开发版本。项目使用 Electron 和 TypeScript，主进程负责语音运行时、Codex 任务、Windows 工具以及模块控制；渲染界面通过隔离的 preload API 和受限 IPC 与主进程通信。
 
-## What Jarvis can do
+## 当前能力
 
-- **Three voice providers:** Codex Voice, Doubao streaming ASR/TTS, and the local speech engine. The provider is selected in Settings; typed input remains available as a fallback.
-- **Wake and conversation flow:** background wake listening, visible transcript of the current utterance, interruption/stop controls, task status, spoken responses, and local conversation history.
-- **Codex work channel:** continues a workspace thread, sends voice or typed requests to Codex, and exposes permission-aware task execution.
-- **Windows control:** launch applications, activate windows, inspect system resources, control volume, list processes, and run Windows UI Automation for supported foreground-window workflows.
-- **Desktop visual interface:** transparent Jarvis helmet, particle assembly, armor inspection mode, gesture-controlled armor interaction, selectable components, and status HUDs that appear only when needed.
-- **Map module:** an internal browser window for AMap search, nearby food and places, route planning, and in-module navigation. It is controlled by Jarvis through restricted IPC and is not a separate installed application.
-- **Rainform module:** local rain visualization driven by weather data. Ask for the nearest rainy city in China or the rain intensity in a named city, then inspect the result in the rain module.
-- **Mineradio module:** play/pause, next/previous, volume, search and play, and visual preset switching. Say “换一个音乐效果” to choose a random preset or name a specific preset.
-- **HUD answers:** weather, search, media and module results can be shown as compact in-world panels next to the helmet instead of taking over the whole screen.
-- **Local memory:** conversation text and metadata are stored in a local SQLite archive. No audio recordings or raw voice data are stored by Jarvis.
+- **三套语音通道：** Codex Voice、豆包流式语音识别/合成、本地语音引擎。可在设置中选择，语音不可用时仍可使用输入框。
+- **唤醒与对话：** 后台唤醒、当前语句实时显示、打断/停止、任务状态、语音回复和本地对话记录。
+- **Codex 工作通道：** 继续指定工作目录的 Codex 线程，发送语音或文字指令，并遵循 Codex 权限策略执行任务。
+- **Windows 控制：** 启动应用、激活窗口、查询系统资源、调节音量、查看进程，并在支持的前台窗口中使用 Windows UI Automation。
+- **全息视觉界面：** 透明 Jarvis 头盔、粒子聚合、战甲检查模式、手势控制、部件选择、高亮和按需出现的 HUD。
+- **地图模块：** AMap 地图在 Jarvis 内部窗口运行，支持附近美食/地点搜索、路线规划和模块内导航。它受 Jarvis 的受限 IPC 控制，不是另一个需要单独安装的软件。
+- **Rainform 雨幕模块：** 使用天气数据显示降雨效果。可以询问中国境内距离最近的下雨城市，也可以查看指定城市的雨量。
+- **Mineradio 音乐模块：** 播放/暂停、上一首/下一首、音量、搜索播放和视觉预设切换。说“换一个音乐效果”会随机切换预设，也可以直接说出指定预设。
+- **HUD 信息面板：** 天气、搜索、媒体和模块结果可以显示在头盔旁边的悬浮信息框内，不占满整个屏幕。
+- **本地记忆：** 对话双方的文字和元数据保存在本地 SQLite 中，用于搜索和语义记忆；Jarvis 不保存原始音频。
 
-## Typical commands
+## 示例指令
 
 ```text
 嗨 Jarvis，打开浏览器搜索今天的天气
@@ -30,36 +30,36 @@ This repository is the Windows-focused continuation of the original Jarvis inter
 结束工作
 ```
 
-The exact available actions depend on the configured provider, API credentials, installed applications, and the state of each module. High-risk file or process operations should be confirmed through the configured Codex permission policy.
+具体动作取决于所选语音通道、API 配置、已安装的软件和模块状态。涉及文件或进程的高风险操作，应按照 Codex 权限策略进行确认。
 
-## Architecture
+## 工作流程
 
 ```text
-Microphone / typed input
+麦克风 / 输入框
         ↓
-Wake gate and speech provider (Codex / Doubao / local)
+唤醒门控与语音通道（Codex / 豆包 / 本地）
         ↓
-Electron main process and command routing
-        ├── Codex workspace runtime and local memory
-        ├── Windows system and UI Automation tools
-        ├── Mineradio bridge
-        ├── Holo-map module
-        ├── Rainform module
-        └── Jarvis visual window and HUDs
+Electron 主进程与指令路由
+        ├── Codex 工作线程和本地记忆
+        ├── Windows 系统与 UI Automation 工具
+        ├── Mineradio 桥接
+        ├── 全息地图模块
+        ├── Rainform 雨幕模块
+        └── Jarvis 视觉窗口与 HUD
 ```
 
-Renderer windows communicate with the main process through isolated preload APIs and restricted IPC. Module windows do not receive unrestricted Node.js or filesystem access.
+模块窗口不会获得无限制的 Node.js 或文件系统权限，所有跨窗口调用都经过隔离的 preload API 和受限 IPC。
 
-## Requirements
+## 系统要求
 
-- Windows 10/11, with Windows 11 recommended
-- Node.js 20 or later
-- Codex App/CLI installed and signed in when using Codex Voice or Codex tasks
-- A microphone for wake and voice control
-- Optional: Doubao API credentials, AMap JS API credentials, and QWeather credentials
-- Optional: Mineradio installation for music controls
+- Windows 10/11，推荐 Windows 11
+- Node.js 20 或更高版本
+- 使用 Codex Voice 或 Codex 任务时，需要安装并登录 Codex App/CLI
+- 语音唤醒需要麦克风
+- 可选：豆包 API、高德地图 JS API、和风天气 API
+- 可选：Mineradio 音乐软件
 
-## Development
+## 开发与构建
 
 ```bash
 npm ci
@@ -68,33 +68,32 @@ npm run windows:build
 npm run dev
 ```
 
-To create a Windows installer:
+生成 Windows 安装包：
 
 ```bash
 npm run windows:dist
 ```
 
-Build outputs are written to the local `dist-windows/` or Electron Builder output directories and are intentionally ignored by Git.
+构建产物写入本地 `dist-windows/` 或 Electron Builder 输出目录，这些目录已经被 Git 忽略。
 
-## Configuration
+## 配置
 
-Open Jarvis Settings to choose the voice provider and enter module credentials. Secrets are stored in the local application configuration and are not committed to this repository. Do not place API keys, tokens, commercial audio, or unlicensed model files in Git.
+在 Jarvis 设置中选择语音通道并填写模块凭据。密钥保存在本机应用配置中，不会提交到仓库。不要把 API Key、Token、SSH 私钥、商业音频或未授权模型文件放进 Git。
 
-For the map module, configure an AMap JS API key and security code. For Rainform, configure the weather API host and key. Doubao requires the API key plus the ASR and TTS resource identifiers required by the selected streaming services.
+地图模块需要高德 JS API Key 和安全密钥；Rainform 需要天气 API Host 与 Key；豆包需要 API Key，以及所选流式识别和语音合成服务要求的 ASR/TTS 资源标识。
 
-## Privacy and safety
+## 隐私与安全
 
-- Voice audio is sent only to the selected voice provider while that provider is active.
-- Conversation text is stored locally for search and semantic memory; raw audio is not archived.
-- The map and weather modules receive only the data needed for their requested operation.
-- `.env` files, local credentials, SSH keys, runtime data, installers, private models, and user-provided music are excluded from version control.
-- Codex permission profiles remain the authority for workspace and high-risk operations.
+- 只有选定的语音通道运行时才会接收对应的语音数据。
+- 对话文字在本地保存，用于搜索和语义记忆；不归档原始音频。
+- 地图与天气模块只接收完成当前请求所需的数据。
+- `.env`、本地凭据、SSH 密钥、运行数据、安装包、私有模型和用户音乐均被排除在版本控制之外。
+- Codex 权限配置是工作区和高风险操作的最终控制边界。
 
-## Project status
+## 项目状态
 
-Jarvis New World is an actively developed Windows desktop project. Voice providers and module integrations are evolving, so service availability and provider protocol changes may require compatibility updates. The source repository is the canonical development artifact; generated installers and local runtime data are not part of the source distribution.
+Jarvis New World 是持续开发中的 Windows 桌面项目。语音服务和模块接口仍会随上游协议更新而调整；源码仓库是开发主线，安装包和本地运行数据不属于源码发布内容。
 
-## License
+## 许可证
 
-The core project is released under the [GNU General Public License v3.0](LICENSE). Third-party modules and assets retain their own licenses; see the accompanying license files and notices before redistribution.
-# jarvis-newworld
+核心项目采用 [GNU GPL v3.0](LICENSE)。第三方模块和素材仍遵循各自许可证，重新分发前请查看随项目提供的许可和声明文件。
