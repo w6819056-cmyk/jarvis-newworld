@@ -19,3 +19,4 @@ public/audio/back-in-black.mp3
 .env.*
 !.env.example
 *.dmg
+.ssh/
