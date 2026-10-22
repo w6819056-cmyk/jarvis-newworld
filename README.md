@@ -97,3 +97,4 @@ Jarvis New World is an actively developed Windows desktop project. Voice provide
 ## License
 
 The core project is released under the [GNU General Public License v3.0](LICENSE). Third-party modules and assets retain their own licenses; see the accompanying license files and notices before redistribution.
+# jarvis-newworld
